@@ -1,0 +1,257 @@
+{
+  "YCB/YCB_testdata/Assets/shot_001/prop-2.skel": {
+    "n_markers": 3,
+    "ranking_max_dist_err_mm": [
+      [
+        1.5416243659088502,
+        "drill"
+      ],
+      [
+        29.88505076388373,
+        "spray"
+      ],
+      [
+        32.52022874011384,
+        "jug"
+      ]
+    ]
+  },
+  "YCB/YCB_testdata/Assets/shot_001/prop-3.skel": {
+    "n_markers": 4,
+    "ranking_max_dist_err_mm": [
+      [
+        64.53527665864151,
+        "football"
+      ],
+      [
+        130.33965120268553,
+        "jug"
+      ],
+      [
+        193.48019033128645,
+        "spray"
+      ]
+    ]
+  },
+  "YCB/YCB_testdata/Assets/shot_001/prop.skel": {
+    "n_markers": 4,
+    "ranking_max_dist_err_mm": [
+      [
+        0.8547150759455058,
+        "jug"
+      ],
+      [
+        63.03911340537105,
+        "spray"
+      ],
+      [
+        64.68099509585942,
+        "football"
+      ]
+    ]
+  },
+  "YCB/YCB_testdata/Assets/shot_003/prop-2.skel": {
+    "n_markers": 3,
+    "ranking_max_dist_err_mm": [
+      [
+        1.5416243659088502,
+        "drill"
+      ],
+      [
+        29.88505076388373,
+        "spray"
+      ],
+      [
+        32.52022874011384,
+        "jug"
+      ]
+    ]
+  },
+  "YCB/YCB_testdata/Assets/shot_003/prop-3.skel": {
+    "n_markers": 4,
+    "ranking_max_dist_err_mm": [
+      [
+        64.53527665864151,
+        "football"
+      ],
+      [
+        130.33965120268553,
+        "jug"
+      ],
+      [
+        193.48019033128645,
+        "spray"
+      ]
+    ]
+  },
+  "YCB/YCB_testdata/Assets/shot_003/prop.skel": {
+    "n_markers": 4,
+    "ranking_max_dist_err_mm": [
+      [
+        0.8547150759455058,
+        "jug"
+      ],
+      [
+        63.03911340537105,
+        "spray"
+      ],
+      [
+        64.68099509585942,
+        "football"
+      ]
+    ]
+  },
+  "YCB/shot_001/prop-2.skel": {
+    "n_markers": 3,
+    "ranking_max_dist_err_mm": [
+      [
+        1.5416243659088502,
+        "drill"
+      ],
+      [
+        29.88505076388373,
+        "spray"
+      ],
+      [
+        32.52022874011384,
+        "jug"
+      ]
+    ]
+  },
+  "YCB/shot_001/prop-3.skel": {
+    "n_markers": 4,
+    "ranking_max_dist_err_mm": [
+      [
+        64.53527665864151,
+        "football"
+      ],
+      [
+        130.33965120268553,
+        "jug"
+      ],
+      [
+        193.48019033128645,
+        "spray"
+      ]
+    ]
+  },
+  "YCB/shot_001/prop.skel": {
+    "n_markers": 4,
+    "ranking_max_dist_err_mm": [
+      [
+        0.8547150759455058,
+        "jug"
+      ],
+      [
+        63.03911340537105,
+        "spray"
+      ],
+      [
+        64.68099509585942,
+        "football"
+      ]
+    ]
+  },
+  "YCB/shot_002/prop-2.skel": {
+    "n_markers": 3,
+    "ranking_max_dist_err_mm": [
+      [
+        1.5416243659088502,
+        "drill"
+      ],
+      [
+        29.88505076388373,
+        "spray"
+      ],
+      [
+        32.52022874011384,
+        "jug"
+      ]
+    ]
+  },
+  "YCB/shot_002/prop-3.skel": {
+    "n_markers": 4,
+    "ranking_max_dist_err_mm": [
+      [
+        64.53527665864151,
+        "football"
+      ],
+      [
+        130.33965120268553,
+        "jug"
+      ],
+      [
+        193.48019033128645,
+        "spray"
+      ]
+    ]
+  },
+  "YCB/shot_002/prop.skel": {
+    "n_markers": 4,
+    "ranking_max_dist_err_mm": [
+      [
+        0.8547150759455058,
+        "jug"
+      ],
+      [
+        63.03911340537105,
+        "spray"
+      ],
+      [
+        64.68099509585942,
+        "football"
+      ]
+    ]
+  },
+  "YCB/shot_003/prop-2.skel": {
+    "n_markers": 3,
+    "ranking_max_dist_err_mm": [
+      [
+        1.5416243659088502,
+        "drill"
+      ],
+      [
+        29.88505076388373,
+        "spray"
+      ],
+      [
+        32.52022874011384,
+        "jug"
+      ]
+    ]
+  },
+  "YCB/shot_003/prop-3.skel": {
+    "n_markers": 4,
+    "ranking_max_dist_err_mm": [
+      [
+        64.53527665864151,
+        "football"
+      ],
+      [
+        130.33965120268553,
+        "jug"
+      ],
+      [
+        193.48019033128645,
+        "spray"
+      ]
+    ]
+  },
+  "YCB/shot_003/prop.skel": {
+    "n_markers": 4,
+    "ranking_max_dist_err_mm": [
+      [
+        0.8547150759455058,
+        "jug"
+      ],
+      [
+        63.03911340537105,
+        "spray"
+      ],
+      [
+        64.68099509585942,
+        "football"
+      ]
+    ]
+  }
+}

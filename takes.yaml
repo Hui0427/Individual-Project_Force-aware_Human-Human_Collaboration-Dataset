@@ -1,0 +1,55 @@
+# 每条 take 一个条目。加新数据 = 复制一段、改 5 个值。
+# 本文件同时是合法 JSON,所以不装 pyyaml 也能读。
+{
+  "defaults": {
+    "persons": ["person1", "person2"],
+    "contact_thr_mm": 15.0,
+    "iters": 300,
+    "mode": "anatomical",
+    "sampled": 500000
+  },
+
+  "takes": {
+    "drill_shot005": {
+      "object": "drill",
+      "take_key": "shot_005/Drill.skel",
+      "object_fbx": "Drill",
+      "data_dir": "/Users/hxy/Desktop/YCB/new_data_0716/shot_005",
+      "mesh": "/Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj",
+      "refine_persons": ["person1"],
+      "frames": [150, 270]
+    },
+
+    "drill_shot007": {
+      "object": "drill",
+      "take_key": "shot_007/Drill.skel",
+      "object_fbx": "Drill",
+      "data_dir": "/Users/hxy/Desktop/YCB/new_data_0716/shot_007",
+      "mesh": "/Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj"
+    },
+
+    "crate_shot012": {
+      "object": "crate",
+      "take_key": "shot_012/Crate.skel",
+      "object_fbx": "Crate",
+      "data_dir": "/Users/hxy/Desktop/YCB/new_data_0716/shot_012",
+      "mesh": "/Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj"
+    },
+
+    "hammer_0728shot007": {
+      "object": "hammer",
+      "take_key": "0728_shot_007/Hammer.skel",
+      "object_fbx": "Hammer",
+      "data_dir": "/Users/hxy/Desktop/YCB/0728_data/0728_shot_007",
+      "mesh": "/Users/hxy/Desktop/YCB/048_hammer/google_16k/textured.obj"
+    },
+
+    "spray_0728shot020": {
+      "object": "spray",
+      "take_key": "0728_shot_020/Spray.skel",
+      "object_fbx": "Spray",
+      "data_dir": "/Users/hxy/Desktop/YCB/0728_data/0728_shot_020",
+      "mesh": "/Users/hxy/Desktop/YCB/022_windex_bottle/google_16k/textured.obj"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+
+======================================================================
+drill_shot005  Sat Aug 15 20:26:51 2026
+======================================================================
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/extract_object_pose.py /Users/hxy/Desktop/YCB/new_data_0716/shot_005/Drill.fbx /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/drill_pose.csv
+node=Drill:Hips  anim 0.0000..18.4333s  fps=60.0
+Wrote 1107 frames to /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/drill_pose.csv
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/extract_person_hand_joints.py /Users/hxy/Desktop/YCB/new_data_0716/shot_005/person1.fbx /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person1_hand_joints.csv
+[stage] loading scene...
+[stage] scene loaded, node count: 80
+[stage] parent index table built
+[stage] anim range: 0.0 18.46666599347796
+[stage] prefix inferred: person1:
+[stage] num_frames: 1109 joints found: 42
+[stage] entering main loop
+frame 0/1109
+frame 50/1109
+frame 100/1109
+frame 150/1109
+frame 200/1109
+frame 250/1109
+frame 300/1109
+frame 350/1109
+frame 400/1109
+frame 450/1109
+frame 500/1109
+frame 550/1109
+frame 600/1109
+frame 650/1109
+frame 700/1109
+frame 750/1109
+frame 800/1109
+frame 850/1109
+frame 900/1109
+frame 950/1109
+frame 1000/1109
+frame 1050/1109
+frame 1100/1109
+Wrote 1109 frames x 42 joints to /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person1_hand_joints.csv
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/extract_local_rotations.py /Users/hxy/Desktop/YCB/new_data_0716/shot_005/person1.fbx /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person1_locals.npz
+frame 0/1109
+frame 200/1109
+frame 400/1109
+frame 600/1109
+frame 800/1109
+frame 1000/1109
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/extract_person_hand_joints.py /Users/hxy/Desktop/YCB/new_data_0716/shot_005/person2.fbx /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person2_hand_joints.csv
+[stage] loading scene...
+[stage] scene loaded, node count: 80
+[stage] parent index table built
+[stage] anim range: 0.0 18.43333299318813
+[stage] prefix inferred: person2:
+[stage] num_frames: 1107 joints found: 42
+[stage] entering main loop
+frame 0/1107
+frame 50/1107
+frame 100/1107
+frame 150/1107
+frame 200/1107
+frame 250/1107
+frame 300/1107
+frame 350/1107
+frame 400/1107
+frame 450/1107
+frame 500/1107
+frame 550/1107
+frame 600/1107
+frame 650/1107
+frame 700/1107
+frame 750/1107
+frame 800/1107
+frame 850/1107
+frame 900/1107
+frame 950/1107
+frame 1000/1107
+frame 1050/1107
+frame 1100/1107
+Wrote 1107 frames x 42 joints to /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person2_hand_joints.csv
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/extract_local_rotations.py /Users/hxy/Desktop/YCB/new_data_0716/shot_005/person2.fbx /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person2_locals.npz
+frame 0/1107
+frame 200/1107
+frame 400/1107
+frame 600/1107
+frame 800/1107
+frame 1000/1107
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/compute_hand_object_distances.py --object drill --take shot_005/Drill.skel --mesh /Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/drill_pose.csv --hands /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person1_hand_joints.csv /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person2_hand_joints.csv --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005 --threshold-mm 15.0 --sampled 500000
+mesh: 16384 faces, aligned into drill Hips frame (take shot_005/Drill.skel, scale [1.0, 1.0, 1.0]), distance mode: sampled KD-tree (500000 pts)
+person1: 1107 frames x 42 joints | min signed -23.8 mm | contact frames @15mm: 644 | penetration(<-5mm) frames: 605
+person2: 1107 frames x 42 joints | min signed -19.0 mm | contact frames @15mm: 377 | penetration(<-5mm) frames: 320
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/distances.csv and summary.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/plot_hoi_results.py --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005 --mesh /Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj --object drill --take shot_005/Drill.skel --object-pose-name drill_pose.csv
+fig1_distance_curves.png
+fig2_contact_timeline.png
+fig3_closest_frame_3d.png  (person1 frame 512, -23.8 mm)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person1_locals.npz --person person1 --object drill --take shot_005/Drill.skel --mesh /Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/drill_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/distances.csv --frames 150 270 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1 --iters 300 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:304: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+FK sanity vs earlier extraction: LeftHand frame 150 differs 0.000 mm
+anatomical mode: 25 hinge joints, 5 2-DOF joints, wrist cap 15.0 deg
+contact targets in segment: 886 (frame,finger) pairs
+  it=0  loss=1.879e+00  contact=1.586e-05  pen=8.603e-05  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=1.015e+00  contact=3.165e-06  pen=4.749e-05  dev=8.242e-03  temp=1.264e-03  lim=3.435e-05
+  it=100  loss=7.440e-01  contact=3.127e-06  pen=3.308e-05  dev=1.504e-02  temp=1.768e-03  lim=7.256e-05
+  it=150  loss=6.199e-01  contact=2.822e-06  pen=2.657e-05  dev=1.987e-02  temp=1.982e-03  lim=7.830e-05
+  it=200  loss=5.405e-01  contact=2.767e-06  pen=2.238e-05  dev=2.333e-02  temp=2.073e-03  lim=4.976e-05
+  it=250  loss=4.928e-01  contact=2.750e-06  pen=1.982e-05  dev=2.592e-02  temp=2.119e-03  lim=5.074e-05
+  it=299  loss=4.564e-01  contact=2.896e-06  pen=1.788e-05  dev=2.738e-02  temp=2.096e-03  lim=5.425e-05
+before: contact 段 capsule 距离   -5.07 mm | 最深穿透  -29.15 mm | 穿透样本占比 56.2%
+after : contact 段 capsule 距离   -1.26 mm | 最深穿透  -27.21 mm | 穿透样本占比 37.8%
+平均改动 12.52°, 最大 49.17°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/replayer_person1.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/replayer_person1.json: 1109 frames x 70 bones (diff bones: 32)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/refined_person1.anim --clip-name refined_person1_drill_shot005
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/refined_person1.anim  (1109 frames, 80 nodes, fps 60, mirror=negate_x)

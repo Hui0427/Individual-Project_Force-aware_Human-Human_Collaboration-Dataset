@@ -1,0 +1,11 @@
+numpy
+scipy
+trimesh
+rtree          # trimesh.proximity 的空间索引后端
+ufbx           # FBX 读取（纯 pip 包，无系统依赖）
+matplotlib
+torch          # scripts/hand_refine/optimize_hand_pose.py
+
+# 可选：takes.yaml 同时是合法 JSON，没有 pyyaml 也能跑
+# pyyaml
+mcap           # scripts/wuji/ 读手套 .mcap

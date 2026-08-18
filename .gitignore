@@ -1,0 +1,27 @@
+# --- Python ---
+.venv/
+__pycache__/
+*.pyc
+
+# --- macOS / 编辑器 ---
+.DS_Store
+
+# --- Claude Code 本地状态（含 memory，不该公开）---
+.claude/
+
+# --- 原始数据 ---
+# Motive/Captury 采集数据约 33 GB，且含参与者影像，不进版本库。
+# 获取方式见 README「Data」一节。
+data/
+
+# --- 可再生的大体积中间产物 ---
+# 这些都能由 scripts/run_take.py 从原始数据重跑出来，
+# 仓库里只保留标定结果、汇总 JSON 和图。
+outputs/**/*_hand_joints.csv
+outputs/**/distances.csv
+outputs/**/*.npz
+outputs/**/replayer*.json
+outputs/**/*.anim
+
+# 内部交接笔记，不公开
+HANDOFF.md

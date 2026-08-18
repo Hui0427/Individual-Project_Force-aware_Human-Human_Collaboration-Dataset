@@ -1,0 +1,2270 @@
+{
+  "sources": [
+    "/Users/hxy/Desktop/YCB/motive prop/algined",
+    "/Users/hxy/Desktop/YCB/Assets_alphabetical.motive"
+  ],
+  "objects": {
+    "chair": {
+      "asset_name": "Chair",
+      "num_markers": 5,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.276815,
+            0.0383956,
+            0.0342673
+          ],
+          "diameter_m": 0.0208805
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.140684,
+            0.385128,
+            -0.165815
+          ],
+          "diameter_m": 0.0206135
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0113994,
+            -0.00694847,
+            0.357876
+          ],
+          "diameter_m": 0.0227874
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            0.0688096,
+            -0.249812,
+            -0.323728
+          ],
+          "diameter_m": 0.0217884
+        },
+        {
+          "name": "Marker 005",
+          "offset_m": [
+            0.337291,
+            -0.166763,
+            0.0974006
+          ],
+          "diameter_m": 0.0226225
+        }
+      ],
+      "geometry": {
+        "file_windows_path": "C:/Users/Target3D/Desktop/Props/obj_import/chair.obj",
+        "file_basename": "chair.obj",
+        "scale_percent": [
+          80.0,
+          85.0,
+          80.0
+        ],
+        "scale_factor": [
+          0.8,
+          0.85,
+          0.8
+        ],
+        "offset_m": [
+          0.0308353,
+          -0.425932,
+          0.052206
+        ],
+        "pitch_yaw_roll_deg": [
+          4.65518e-05,
+          34.8,
+          -0.00165538
+        ],
+        "pitch_yaw_roll_explicit": true,
+        "alignment_done": true
+      },
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "crate": {
+      "asset_name": "Crate",
+      "num_markers": 6,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.296668,
+            -0.183274,
+            -0.263686
+          ],
+          "diameter_m": 0.0214947
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.179385,
+            0.131429,
+            0.0389228
+          ],
+          "diameter_m": 0.0201838
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.109972,
+            -0.0623579,
+            0.315788
+          ],
+          "diameter_m": 0.0207022
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            0.0213304,
+            0.137858,
+            -0.017064
+          ],
+          "diameter_m": 0.0206558
+        },
+        {
+          "name": "Marker 005",
+          "offset_m": [
+            -0.290734,
+            0.133187,
+            0.25724
+          ],
+          "diameter_m": 0.0218637
+        },
+        {
+          "name": "Marker 006",
+          "offset_m": [
+            -0.0966768,
+            -0.156842,
+            -0.331201
+          ],
+          "diameter_m": 0.0209807
+        }
+      ],
+      "geometry": {
+        "file_windows_path": "C:/Users/Target3D/Desktop/Props/obj_import/creat.obj",
+        "file_basename": "creat.obj",
+        "scale_percent": [
+          80.0,
+          80.0,
+          80.0
+        ],
+        "scale_factor": [
+          0.8,
+          0.8,
+          0.8
+        ],
+        "offset_m": [
+          0.0114857,
+          -0.236735,
+          -0.0261059
+        ],
+        "pitch_yaw_roll_deg": [
+          -13.4387,
+          69.8433,
+          17.5419
+        ],
+        "pitch_yaw_roll_explicit": true,
+        "alignment_done": true
+      },
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "drill": {
+      "asset_name": "Drill",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.0212016,
+            -0.0691134,
+            0.0375342
+          ],
+          "diameter_m": 0.0237815
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.00489777,
+            -0.0351119,
+            -0.0393013
+          ],
+          "diameter_m": 0.0232978
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0260993,
+            0.104225,
+            0.0017671
+          ],
+          "diameter_m": 0.0220822
+        }
+      ],
+      "geometry": {
+        "file_windows_path": "C:/Users/Target3D/Downloads/035_power_drill_google_512k/035_power_drill/google_512k/textured.obj",
+        "file_basename": "textured.obj",
+        "scale_percent": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "scale_factor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "offset_m": [
+          0.0369533,
+          -0.00154315,
+          0.0168004
+        ],
+        "pitch_yaw_roll_deg": [
+          -0.00516376,
+          -65.8,
+          0.00706913
+        ],
+        "pitch_yaw_roll_explicit": true,
+        "alignment_done": true
+      },
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "football": {
+      "asset_name": "Football",
+      "num_markers": 5,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.0561989,
+            -0.0209073,
+            0.0464726
+          ],
+          "diameter_m": 0.0281227
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.0425771,
+            0.0461326,
+            0.00323266
+          ],
+          "diameter_m": 0.0249733
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0496643,
+            0.0389097,
+            0.00835043
+          ],
+          "diameter_m": 0.0298313
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            -0.0494444,
+            -0.0699036,
+            0.0245992
+          ],
+          "diameter_m": 0.026579
+        },
+        {
+          "name": "Marker 005",
+          "offset_m": [
+            -0.0138417,
+            0.0057686,
+            -0.0826546
+          ],
+          "diameter_m": 0.0306804
+        }
+      ],
+      "geometry": {
+        "file_windows_path": "C:/Users/Target3D/Desktop/Props/obj_import/053_mini_soccer_ball_google_64k/053_mini_soccer_ball/google_64k/textured.obj",
+        "file_basename": "textured.obj",
+        "scale_percent": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "scale_factor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "offset_m": [
+          0.00473258,
+          -0.0167395,
+          -0.0665549
+        ],
+        "pitch_yaw_roll_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pitch_yaw_roll_explicit": false,
+        "alignment_done": true
+      },
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "hammer": {
+      "asset_name": "Hammer",
+      "num_markers": 4,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.111952,
+            -0.0019912,
+            -0.0617476
+          ],
+          "diameter_m": 0.0216364
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.0124399,
+            0.0146501,
+            -0.0160212
+          ],
+          "diameter_m": 0.0183533
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.211746,
+            -0.00869282,
+            0.0635975
+          ],
+          "diameter_m": 0.0227499
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            -0.112234,
+            -0.00396607,
+            0.0141712
+          ],
+          "diameter_m": 0.0168213
+        }
+      ],
+      "geometry": {
+        "file_windows_path": "C:/Users/Target3D/Desktop/Props/obj_import/048_hammer_google_512k/048_hammer/google_512k/textured.obj",
+        "file_basename": "textured.obj",
+        "scale_percent": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "scale_factor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "offset_m": [
+          0.0156476,
+          0.01721,
+          0.0293456
+        ],
+        "pitch_yaw_roll_deg": [
+          95.5691,
+          0.274091,
+          89.8274
+        ],
+        "pitch_yaw_roll_explicit": true,
+        "alignment_done": true
+      },
+      "source_file": "Hammer.motive"
+    },
+    "jug": {
+      "asset_name": "Jug",
+      "num_markers": 4,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.0656807,
+            -0.0690668,
+            0.0520962
+          ],
+          "diameter_m": 0.0283003
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.0423605,
+            0.0494816,
+            0.021951
+          ],
+          "diameter_m": 0.019972
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.0586418,
+            -0.0857423,
+            -0.0269189
+          ],
+          "diameter_m": 0.0276172
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            0.0353215,
+            0.105328,
+            -0.0471282
+          ],
+          "diameter_m": 0.0267671
+        }
+      ],
+      "geometry": {
+        "file_windows_path": "C:/Users/Target3D/Downloads/019_pitcher_base_google_16k/019_pitcher_base/google_16k/textured.obj",
+        "file_basename": "textured.obj",
+        "scale_percent": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "scale_factor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "offset_m": [
+          -0.00649848,
+          -0.140971,
+          -0.0299748
+        ],
+        "pitch_yaw_roll_deg": [
+          -90.008,
+          0.00635208,
+          -104.0
+        ],
+        "pitch_yaw_roll_explicit": true,
+        "alignment_done": true
+      },
+      "source_file": "Jug.motive"
+    },
+    "spray": {
+      "asset_name": "Spray",
+      "num_markers": 4,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.012238,
+            0.137458,
+            -0.00736512
+          ],
+          "diameter_m": 0.0210706
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.0322619,
+            0.0341678,
+            -0.0326729
+          ],
+          "diameter_m": 0.0174979
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.0355049,
+            -0.135415,
+            -0.00886729
+          ],
+          "diameter_m": 0.0184362
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            -0.00899495,
+            -0.0362107,
+            0.0489053
+          ],
+          "diameter_m": 0.0193045
+        }
+      ],
+      "geometry": {
+        "file_windows_path": "C:/Users/Target3D/Desktop/Props/obj_import/022_windex_bottle_google_64k/022_windex_bottle/google_64k/textured.obj",
+        "file_basename": "textured.obj",
+        "scale_percent": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "scale_factor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "offset_m": [
+          0.0233946,
+          -0.140811,
+          -0.0364063
+        ],
+        "pitch_yaw_roll_deg": [
+          -93.6418,
+          -0.925235,
+          -150.298
+        ],
+        "pitch_yaw_roll_explicit": true,
+        "alignment_done": true
+      },
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "table": {
+      "asset_name": "Table",
+      "num_markers": 5,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.273379,
+            -0.384259,
+            0.513355
+          ],
+          "diameter_m": 0.0271861
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.20738,
+            0.27193,
+            -0.304032
+          ],
+          "diameter_m": 0.0254716
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.272599,
+            0.256372,
+            0.534916
+          ],
+          "diameter_m": 0.022502
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            -0.0481465,
+            -0.197162,
+            -1.05009
+          ],
+          "diameter_m": 0.0249118
+        },
+        {
+          "name": "Marker 005",
+          "offset_m": [
+            0.386745,
+            0.0531189,
+            0.305848
+          ],
+          "diameter_m": 0.0256826
+        }
+      ],
+      "geometry": {
+        "file_windows_path": "C:/Users/Target3D/Desktop/Props/obj_import/table.obj",
+        "file_basename": "table.obj",
+        "scale_percent": [
+          160.0,
+          166.0,
+          160.0
+        ],
+        "scale_factor": [
+          1.6,
+          1.66,
+          1.6
+        ],
+        "offset_m": [
+          -0.138963,
+          -0.476005,
+          -0.258278
+        ],
+        "pitch_yaw_roll_deg": [
+          0.421233,
+          18.5995,
+          -0.121696
+        ],
+        "pitch_yaw_roll_explicit": true,
+        "alignment_done": true
+      },
+      "source_file": "Table.motive"
+    },
+    "apple": {
+      "asset_name": "apple",
+      "num_markers": 4,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.00726041,
+            0.0396874,
+            -1.77622e-05
+          ],
+          "diameter_m": 0.0204053
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.0153193,
+            -0.0107349,
+            -0.0374836
+          ],
+          "diameter_m": 0.0108427
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.0459462,
+            -0.00133359,
+            -0.000296175
+          ],
+          "diameter_m": 0.0147417
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            0.0233665,
+            -0.0276191,
+            0.0377975
+          ],
+          "diameter_m": 0.0154341
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "banana": {
+      "asset_name": "Banana",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.0504058,
+            -0.0294157,
+            0.0432949
+          ],
+          "diameter_m": 0.0169252
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.0645535,
+            0.00299573,
+            -0.0803612
+          ],
+          "diameter_m": 0.0175751
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0141477,
+            0.02642,
+            0.0370663
+          ],
+          "diameter_m": 0.0182672
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "bowl": {
+      "asset_name": "Bowl",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.040327,
+            0.00779259,
+            0.0486825
+          ],
+          "diameter_m": 0.0223625
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.0413861,
+            0.0361971,
+            -0.0436823
+          ],
+          "diameter_m": 0.0212336
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0817133,
+            -0.0439898,
+            -0.00500011
+          ],
+          "diameter_m": 0.0197446
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "can": {
+      "asset_name": "Can",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.00986025,
+            -0.0393881,
+            -0.0327207
+          ],
+          "diameter_m": 0.0278557
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.0349808,
+            0.0199051,
+            0.036701
+          ],
+          "diameter_m": 0.0267651
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.044841,
+            0.0194829,
+            -0.00398034
+          ],
+          "diameter_m": 0.0227647
+        }
+      ],
+      "geometry": {
+        "file_windows_path": "C:/Users/Target3D/Desktop/Props/obj_import/005_tomato_soup_can_google_512k/005_tomato_soup_can/google_512k/textured.obj",
+        "file_basename": "textured.obj",
+        "scale_percent": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "scale_factor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "offset_m": [
+          0.0400792,
+          -0.0470671,
+          0.084546
+        ],
+        "pitch_yaw_roll_deg": [
+          -100.0,
+          -3.70732,
+          15.2253
+        ],
+        "pitch_yaw_roll_explicit": true,
+        "alignment_done": true
+      },
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "clamp": {
+      "asset_name": "Clamp",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.033077,
+            -0.0108042,
+            0.0500166
+          ],
+          "diameter_m": 0.02427
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.0375194,
+            0.0034979,
+            -0.0117434
+          ],
+          "diameter_m": 0.0170336
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.00444242,
+            0.00730634,
+            -0.0382732
+          ],
+          "diameter_m": 0.0170081
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "coffee_can": {
+      "asset_name": "Coffee Can",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.0393897,
+            -0.0585724,
+            -0.0390182
+          ],
+          "diameter_m": 0.0215419
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.0329295,
+            0.0663584,
+            -0.0128726
+          ],
+          "diameter_m": 0.0211947
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.00646027,
+            -0.00778604,
+            0.0518908
+          ],
+          "diameter_m": 0.0211523
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "coffee_can_0808": {
+      "asset_name": "coffee can_0808",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.0421644,
+            -0.00579055,
+            0.0448065
+          ],
+          "diameter_m": 0.0197055
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.00693816,
+            -0.0582675,
+            -0.0433125
+          ],
+          "diameter_m": 0.0237543
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0352261,
+            0.0640581,
+            -0.00149393
+          ],
+          "diameter_m": 0.018786
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "condiment": {
+      "asset_name": "Condiment",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.0128829,
+            0.0537868,
+            -0.0288412
+          ],
+          "diameter_m": 0.0223948
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.0274353,
+            0.0137038,
+            0.032201
+          ],
+          "diameter_m": 0.0179978
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0403182,
+            -0.0674906,
+            -0.00335978
+          ],
+          "diameter_m": 0.0208735
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "cracker_box": {
+      "asset_name": "Cracker box",
+      "num_markers": 4,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.0306313,
+            -0.013269,
+            0.0188476
+          ],
+          "diameter_m": 0.0217805
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.067374,
+            -0.0983312,
+            -0.0242689
+          ],
+          "diameter_m": 0.0187263
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.132875,
+            0.0425319,
+            0.038219
+          ],
+          "diameter_m": 0.0196502
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            0.0348697,
+            0.0690683,
+            -0.0327977
+          ],
+          "diameter_m": 0.0228451
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "cup": {
+      "asset_name": "Cup",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.0381563,
+            0.00508481,
+            -0.011837
+          ],
+          "diameter_m": 0.0234999
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.00577216,
+            0.0329725,
+            0.0484018
+          ],
+          "diameter_m": 0.0149566
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.0439285,
+            -0.0380574,
+            -0.0365648
+          ],
+          "diameter_m": 0.022025
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "detergent": {
+      "asset_name": "Detergent",
+      "num_markers": 5,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.00848499,
+            0.131413,
+            -0.0151366
+          ],
+          "diameter_m": 0.0177406
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.0356308,
+            -0.0296054,
+            0.0159781
+          ],
+          "diameter_m": 0.0154466
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0083555,
+            -0.102762,
+            -0.035347
+          ],
+          "diameter_m": 0.0192085
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            -0.0282739,
+            0.0931275,
+            0.000742272
+          ],
+          "diameter_m": 0.0135504
+        },
+        {
+          "name": "Marker 005",
+          "offset_m": [
+            0.0470643,
+            -0.0921725,
+            0.0337633
+          ],
+          "diameter_m": 0.0193378
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "frying_pan": {
+      "asset_name": "Frying Pan",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.14177,
+            0.053448,
+            0.0871463
+          ],
+          "diameter_m": 0.0277945
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.0735984,
+            -0.107618,
+            0.000772089
+          ],
+          "diameter_m": 0.0193234
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0681716,
+            0.0541705,
+            -0.0879183
+          ],
+          "diameter_m": 0.0219133
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "hammer0807": {
+      "asset_name": "hammer0807",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.031899,
+            -0.00803348,
+            -0.167829
+          ],
+          "diameter_m": 0.026542
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.0336787,
+            0.0133216,
+            0.0110867
+          ],
+          "diameter_m": 0.0218641
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.00177944,
+            -0.00528815,
+            0.156742
+          ],
+          "diameter_m": 0.0173402
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "luggage": {
+      "asset_name": "Luggage",
+      "num_markers": 6,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.0680917,
+            0.048048,
+            0.206408
+          ],
+          "diameter_m": 0.0223161
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.169381,
+            -0.0417953,
+            -0.057724
+          ],
+          "diameter_m": 0.0192482
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.0869197,
+            -0.0792876,
+            0.182985
+          ],
+          "diameter_m": 0.0221132
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            0.189819,
+            0.0368031,
+            -0.0766461
+          ],
+          "diameter_m": 0.0215323
+        },
+        {
+          "name": "Marker 005",
+          "offset_m": [
+            0.139604,
+            -0.0182792,
+            -0.0293809
+          ],
+          "diameter_m": 0.0230535
+        },
+        {
+          "name": "Marker 006",
+          "offset_m": [
+            -0.00503144,
+            0.0545105,
+            -0.225642
+          ],
+          "diameter_m": 0.0223149
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "luggage_lid": {
+      "asset_name": "Luggage_Lid",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.226048,
+            0.00437939,
+            -0.129646
+          ],
+          "diameter_m": 0.0231597
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.0303665,
+            -0.0175938,
+            0.15419
+          ],
+          "diameter_m": 0.0215692
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.195682,
+            0.0132144,
+            -0.0245436
+          ],
+          "diameter_m": 0.0232048
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "luggage_open": {
+      "asset_name": "Luggage_Open",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.156128,
+            -0.021796,
+            0.0366066
+          ],
+          "diameter_m": 0.0219809
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.0759515,
+            0.0304511,
+            -0.172169
+          ],
+          "diameter_m": 0.0192626
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.0801765,
+            -0.00865507,
+            0.135563
+          ],
+          "diameter_m": 0.0189395
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "orange": {
+      "asset_name": "Orange",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.0105349,
+            -0.0346721,
+            0.0257509
+          ],
+          "diameter_m": 0.0225082
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.00791182,
+            0.0340496,
+            0.0109119
+          ],
+          "diameter_m": 0.0226931
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.00262311,
+            0.000622392,
+            -0.0366628
+          ],
+          "diameter_m": 0.0237692
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "pear": {
+      "asset_name": "Pear",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.00981503,
+            0.0164889,
+            0.0432795
+          ],
+          "diameter_m": 0.0204947
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.0299837,
+            -0.0159404,
+            -0.0311074
+          ],
+          "diameter_m": 0.0181982
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0397987,
+            -0.000548363,
+            -0.0121722
+          ],
+          "diameter_m": 0.0217139
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "plate": {
+      "asset_name": "Plate",
+      "num_markers": 5,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.00387056,
+            0.00630403,
+            0.0888265
+          ],
+          "diameter_m": 0.0140932
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.0918381,
+            -0.00486195,
+            0.0428296
+          ],
+          "diameter_m": 0.0150222
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0261062,
+            0.00289917,
+            -0.0856562
+          ],
+          "diameter_m": 0.0143636
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            -0.0215642,
+            -0.0176481,
+            -0.0418192
+          ],
+          "diameter_m": 0.0123528
+        },
+        {
+          "name": "Marker 005",
+          "offset_m": [
+            0.0834257,
+            0.0133069,
+            -0.00418097
+          ],
+          "diameter_m": 0.0113299
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "pringle_can": {
+      "asset_name": "Pringle Can",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.000995487,
+            -0.0925286,
+            -0.0231286
+          ],
+          "diameter_m": 0.0229458
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.0317246,
+            0.0918086,
+            -0.0276782
+          ],
+          "diameter_m": 0.0209207
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0327201,
+            0.000719965,
+            0.0508069
+          ],
+          "diameter_m": 0.0265952
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "scissor": {
+      "asset_name": "scissor",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.0307513,
+            0.00149441,
+            0.0917573
+          ],
+          "diameter_m": 0.0175389
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.0157366,
+            -0.00357354,
+            0.00232781
+          ],
+          "diameter_m": 0.0154166
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0150147,
+            0.00207901,
+            -0.0940851
+          ],
+          "diameter_m": 0.0181514
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "screwdriver": {
+      "asset_name": "Screwdriver",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.101329,
+            -0.0114919,
+            -0.0543661
+          ],
+          "diameter_m": 0.0117884
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.00376424,
+            0.00698841,
+            0.0127126
+          ],
+          "diameter_m": 0.0169269
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.0975648,
+            0.00450337,
+            0.0416535
+          ],
+          "diameter_m": 0.0173697
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "spatula": {
+      "asset_name": "Spatula",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.0372215,
+            0.0237815,
+            -0.0589336
+          ],
+          "diameter_m": 0.0226158
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.0656149,
+            -0.0149863,
+            -0.00987191
+          ],
+          "diameter_m": 0.0220453
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.102836,
+            -0.00879526,
+            0.0688055
+          ],
+          "diameter_m": 0.0185837
+        }
+      ],
+      "geometry": {
+        "file_windows_path": "C:/Users/Target3D/Desktop/Props/obj_import/033_spatula_google_512k/033_spatula/google_512k/textured.obj",
+        "file_basename": "textured.obj",
+        "scale_percent": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "scale_factor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "offset_m": [
+          -0.00952355,
+          -0.0127001,
+          0.101297
+        ],
+        "pitch_yaw_roll_deg": [
+          98.1084,
+          4.69428,
+          -19.6483
+        ],
+        "pitch_yaw_roll_explicit": true,
+        "alignment_done": true
+      },
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "spoon": {
+      "asset_name": "Spoon",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.0718505,
+            0.0113055,
+            -0.0591292
+          ],
+          "diameter_m": 0.0200548
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.062836,
+            -0.00721437,
+            0.0499072
+          ],
+          "diameter_m": 0.0247911
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.00901446,
+            -0.00409114,
+            0.00922197
+          ],
+          "diameter_m": 0.0253599
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "strawberry": {
+      "asset_name": "Strawberry",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.00861464,
+            0.00212175,
+            -0.0367965
+          ],
+          "diameter_m": 0.0226351
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.00619504,
+            -0.00709683,
+            0.00520259
+          ],
+          "diameter_m": 0.0265994
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.00241962,
+            0.00497502,
+            0.0315939
+          ],
+          "diameter_m": 0.0212846
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "table_0807": {
+      "asset_name": "Table_0807",
+      "num_markers": 5,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.758047,
+            -0.362566,
+            0.337917
+          ],
+          "diameter_m": 0.0259774
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.752716,
+            -0.189049,
+            -0.167766
+          ],
+          "diameter_m": 0.019955
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.685492,
+            0.200308,
+            0.453583
+          ],
+          "diameter_m": 0.0204417
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            0.65605,
+            0.0677375,
+            -0.342418
+          ],
+          "diameter_m": 0.0278041
+        },
+        {
+          "name": "Marker 005",
+          "offset_m": [
+            0.024112,
+            0.283568,
+            -0.281316
+          ],
+          "diameter_m": 0.0234637
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "table_0814": {
+      "asset_name": "Table_0814",
+      "num_markers": 5,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.792755,
+            -0.35911,
+            0.117217
+          ],
+          "diameter_m": 0.0285821
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            -0.780819,
+            -0.195791,
+            0.0448956
+          ],
+          "diameter_m": 0.0271631
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            0.0132602,
+            0.28445,
+            -0.261223
+          ],
+          "diameter_m": 0.0275977
+        },
+        {
+          "name": "Marker 004",
+          "offset_m": [
+            0.518796,
+            0.0732085,
+            -0.523484
+          ],
+          "diameter_m": 0.0259632
+        },
+        {
+          "name": "Marker 005",
+          "offset_m": [
+            -0.543992,
+            0.197241,
+            0.622595
+          ],
+          "diameter_m": 0.0167149
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "wooden_block": {
+      "asset_name": "Wooden Block",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            0.0357339,
+            -0.00274789,
+            0.0252218
+          ],
+          "diameter_m": 0.0290342
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.0112048,
+            0.0570897,
+            -0.0325535
+          ],
+          "diameter_m": 0.0226031
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.0469387,
+            -0.0543418,
+            0.00733169
+          ],
+          "diameter_m": 0.0262973
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    },
+    "wooden_block_0810_1421": {
+      "asset_name": "wooden_block_0810_1421",
+      "num_markers": 3,
+      "markers": [
+        {
+          "name": "Marker 001",
+          "offset_m": [
+            -0.0244128,
+            0.0426657,
+            -0.0237641
+          ],
+          "diameter_m": 0.0210303
+        },
+        {
+          "name": "Marker 002",
+          "offset_m": [
+            0.0429229,
+            -0.0100383,
+            -0.0113547
+          ],
+          "diameter_m": 0.0286009
+        },
+        {
+          "name": "Marker 003",
+          "offset_m": [
+            -0.0185102,
+            -0.0326276,
+            0.0351188
+          ],
+          "diameter_m": 0.0245567
+        }
+      ],
+      "geometry": null,
+      "source_file": "Assets_alphabetical.motive"
+    }
+  },
+  "variants": {
+    "chair": [
+      {
+        "source_file": "Chair.motive",
+        "num_markers": 5,
+        "aligned": true,
+        "markers": [
+          {
+            "name": "Marker 001",
+            "offset_m": [
+              -0.276815,
+              0.0383956,
+              0.0342673
+            ],
+            "diameter_m": 0.0208805
+          },
+          {
+            "name": "Marker 002",
+            "offset_m": [
+              -0.140684,
+              0.385128,
+              -0.165815
+            ],
+            "diameter_m": 0.0206135
+          },
+          {
+            "name": "Marker 003",
+            "offset_m": [
+              0.0113994,
+              -0.00694847,
+              0.357876
+            ],
+            "diameter_m": 0.0227874
+          },
+          {
+            "name": "Marker 004",
+            "offset_m": [
+              0.0688096,
+              -0.249812,
+              -0.323728
+            ],
+            "diameter_m": 0.0217884
+          },
+          {
+            "name": "Marker 005",
+            "offset_m": [
+              0.337291,
+              -0.166763,
+              0.0974006
+            ],
+            "diameter_m": 0.0226225
+          }
+        ],
+        "geometry": {
+          "file_windows_path": "C:/Users/Target3D/Desktop/Props/obj_import/chair.obj",
+          "file_basename": "chair.obj",
+          "scale_percent": [
+            80.0,
+            85.0,
+            80.0
+          ],
+          "scale_factor": [
+            0.8,
+            0.85,
+            0.8
+          ],
+          "offset_m": [
+            0.0308353,
+            -0.425932,
+            0.052206
+          ],
+          "pitch_yaw_roll_deg": [
+            4.65518e-05,
+            34.8,
+            -0.00165538
+          ],
+          "pitch_yaw_roll_explicit": true,
+          "alignment_done": true
+        }
+      }
+    ],
+    "crate": [
+      {
+        "source_file": "Crate.motive",
+        "num_markers": 6,
+        "aligned": true,
+        "markers": [
+          {
+            "name": "Marker 001",
+            "offset_m": [
+              0.296668,
+              -0.183274,
+              -0.263686
+            ],
+            "diameter_m": 0.0214947
+          },
+          {
+            "name": "Marker 002",
+            "offset_m": [
+              0.179385,
+              0.131429,
+              0.0389228
+            ],
+            "diameter_m": 0.0201838
+          },
+          {
+            "name": "Marker 003",
+            "offset_m": [
+              -0.109972,
+              -0.0623579,
+              0.315788
+            ],
+            "diameter_m": 0.0207022
+          },
+          {
+            "name": "Marker 004",
+            "offset_m": [
+              0.0213304,
+              0.137858,
+              -0.017064
+            ],
+            "diameter_m": 0.0206558
+          },
+          {
+            "name": "Marker 005",
+            "offset_m": [
+              -0.290734,
+              0.133187,
+              0.25724
+            ],
+            "diameter_m": 0.0218637
+          },
+          {
+            "name": "Marker 006",
+            "offset_m": [
+              -0.0966768,
+              -0.156842,
+              -0.331201
+            ],
+            "diameter_m": 0.0209807
+          }
+        ],
+        "geometry": {
+          "file_windows_path": "C:/Users/Target3D/Desktop/Props/obj_import/creat.obj",
+          "file_basename": "creat.obj",
+          "scale_percent": [
+            80.0,
+            80.0,
+            80.0
+          ],
+          "scale_factor": [
+            0.8,
+            0.8,
+            0.8
+          ],
+          "offset_m": [
+            0.0114857,
+            -0.236735,
+            -0.0261059
+          ],
+          "pitch_yaw_roll_deg": [
+            -13.4387,
+            69.8433,
+            17.5419
+          ],
+          "pitch_yaw_roll_explicit": true,
+          "alignment_done": true
+        }
+      }
+    ],
+    "drill": [
+      {
+        "source_file": "Drill.motive",
+        "num_markers": 3,
+        "aligned": true,
+        "markers": [
+          {
+            "name": "Marker 001",
+            "offset_m": [
+              -0.0212016,
+              -0.0691134,
+              0.0375342
+            ],
+            "diameter_m": 0.0237815
+          },
+          {
+            "name": "Marker 002",
+            "offset_m": [
+              -0.00489777,
+              -0.0351119,
+              -0.0393013
+            ],
+            "diameter_m": 0.0232978
+          },
+          {
+            "name": "Marker 003",
+            "offset_m": [
+              0.0260993,
+              0.104225,
+              0.0017671
+            ],
+            "diameter_m": 0.0220822
+          }
+        ],
+        "geometry": {
+          "file_windows_path": "C:/Users/Target3D/Downloads/035_power_drill_google_512k/035_power_drill/google_512k/textured.obj",
+          "file_basename": "textured.obj",
+          "scale_percent": [
+            100.0,
+            100.0,
+            100.0
+          ],
+          "scale_factor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "offset_m": [
+            0.0369533,
+            -0.00154315,
+            0.0168004
+          ],
+          "pitch_yaw_roll_deg": [
+            -0.00516376,
+            -65.8,
+            0.00706913
+          ],
+          "pitch_yaw_roll_explicit": true,
+          "alignment_done": true
+        }
+      }
+    ],
+    "football": [
+      {
+        "source_file": "Football.motive",
+        "num_markers": 5,
+        "aligned": true,
+        "markers": [
+          {
+            "name": "Marker 001",
+            "offset_m": [
+              0.0561989,
+              -0.0209073,
+              0.0464726
+            ],
+            "diameter_m": 0.0281227
+          },
+          {
+            "name": "Marker 002",
+            "offset_m": [
+              -0.0425771,
+              0.0461326,
+              0.00323266
+            ],
+            "diameter_m": 0.0249733
+          },
+          {
+            "name": "Marker 003",
+            "offset_m": [
+              0.0496643,
+              0.0389097,
+              0.00835043
+            ],
+            "diameter_m": 0.0298313
+          },
+          {
+            "name": "Marker 004",
+            "offset_m": [
+              -0.0494444,
+              -0.0699036,
+              0.0245992
+            ],
+            "diameter_m": 0.026579
+          },
+          {
+            "name": "Marker 005",
+            "offset_m": [
+              -0.0138417,
+              0.0057686,
+              -0.0826546
+            ],
+            "diameter_m": 0.0306804
+          }
+        ],
+        "geometry": {
+          "file_windows_path": "C:/Users/Target3D/Desktop/Props/obj_import/053_mini_soccer_ball_google_64k/053_mini_soccer_ball/google_64k/textured.obj",
+          "file_basename": "textured.obj",
+          "scale_percent": [
+            100.0,
+            100.0,
+            100.0
+          ],
+          "scale_factor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "offset_m": [
+            0.00473258,
+            -0.0167395,
+            -0.0665549
+          ],
+          "pitch_yaw_roll_deg": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "pitch_yaw_roll_explicit": false,
+          "alignment_done": true
+        }
+      }
+    ],
+    "hammer": [
+      {
+        "source_file": "Assets_alphabetical.motive",
+        "num_markers": 4,
+        "aligned": false,
+        "markers": [
+          {
+            "name": "Marker 001",
+            "offset_m": [
+              -0.0491727,
+              -0.00391171,
+              0.124367
+            ],
+            "diameter_m": 0.0201882
+          },
+          {
+            "name": "Marker 002",
+            "offset_m": [
+              -0.0168471,
+              0.0148485,
+              -0.0277199
+            ],
+            "diameter_m": 0.0224744
+          },
+          {
+            "name": "Marker 003",
+            "offset_m": [
+              0.0376079,
+              -0.00680321,
+              -0.212056
+            ],
+            "diameter_m": 0.0229695
+          },
+          {
+            "name": "Marker 004",
+            "offset_m": [
+              0.0284119,
+              -0.00413362,
+              0.115409
+            ],
+            "diameter_m": 0.0162263
+          }
+        ],
+        "geometry": null
+      }
+    ],
+    "jug": [
+      {
+        "source_file": "Assets_alphabetical.motive",
+        "num_markers": 3,
+        "aligned": false,
+        "markers": [
+          {
+            "name": "Marker 001",
+            "offset_m": [
+              0.0586415,
+              0.074941,
+              -0.00303931
+            ],
+            "diameter_m": 0.0262983
+          },
+          {
+            "name": "Marker 002",
+            "offset_m": [
+              -0.0310702,
+              0.0237586,
+              -0.054343
+            ],
+            "diameter_m": 0.023194
+          },
+          {
+            "name": "Marker 003",
+            "offset_m": [
+              -0.0275713,
+              -0.0986996,
+              0.0573824
+            ],
+            "diameter_m": 0.0291145
+          }
+        ],
+        "geometry": {
+          "file_windows_path": "C:/Users/Target3D/Desktop/jug_rigid_body.obj",
+          "file_basename": "jug_rigid_body.obj",
+          "scale_percent": [
+            100.0,
+            100.0,
+            100.0
+          ],
+          "scale_factor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "offset_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "pitch_yaw_roll_deg": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "pitch_yaw_roll_explicit": false,
+          "alignment_done": false
+        }
+      }
+    ],
+    "spray": [
+      {
+        "source_file": "Spray.motive",
+        "num_markers": 4,
+        "aligned": true,
+        "markers": [
+          {
+            "name": "Marker 001",
+            "offset_m": [
+              0.012238,
+              0.137458,
+              -0.00736512
+            ],
+            "diameter_m": 0.0210706
+          },
+          {
+            "name": "Marker 002",
+            "offset_m": [
+              0.0322619,
+              0.0341678,
+              -0.0326729
+            ],
+            "diameter_m": 0.0174979
+          },
+          {
+            "name": "Marker 003",
+            "offset_m": [
+              -0.0355049,
+              -0.135415,
+              -0.00886729
+            ],
+            "diameter_m": 0.0184362
+          },
+          {
+            "name": "Marker 004",
+            "offset_m": [
+              -0.00899495,
+              -0.0362107,
+              0.0489053
+            ],
+            "diameter_m": 0.0193045
+          }
+        ],
+        "geometry": {
+          "file_windows_path": "C:/Users/Target3D/Desktop/Props/obj_import/022_windex_bottle_google_64k/022_windex_bottle/google_64k/textured.obj",
+          "file_basename": "textured.obj",
+          "scale_percent": [
+            100.0,
+            100.0,
+            100.0
+          ],
+          "scale_factor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "offset_m": [
+            0.0233946,
+            -0.140811,
+            -0.0364063
+          ],
+          "pitch_yaw_roll_deg": [
+            -93.6418,
+            -0.925235,
+            -150.298
+          ],
+          "pitch_yaw_roll_explicit": true,
+          "alignment_done": true
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+[stage] loading scene...
+[stage] scene loaded, node count: 84
+[stage] parent index table built
+[stage] anim range: 0.0 9.733333999420346
+[stage] prefix inferred: person2:
+[stage] num_frames: 585 joints found: 42
+[stage] entering main loop
+frame 0/585
+frame 50/585
+frame 100/585
+frame 150/585
+frame 200/585
+frame 250/585
+frame 300/585
+frame 350/585
+frame 400/585
+frame 450/585
+frame 500/585
+frame 550/585
+Wrote 585 frames x 42 joints to outputs/person2_hand_joints.csv

@@ -1,0 +1,942 @@
+{
+  "jug": {
+    "shot_001/prop.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/shot_001/prop.skel",
+      "n_markers": 4,
+      "correspondence_captury_to_motive": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "R_motive_to_captury": [
+        [
+          0.857307,
+          -0.006738,
+          0.514762
+        ],
+        [
+          0.00973,
+          0.999948,
+          -0.003116
+        ],
+        [
+          -0.514714,
+          0.00768,
+          0.857327
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "rms_mm": 0.4289886628963646,
+      "det": 1.0,
+      "angle_deg": 30.98624258259447,
+      "axis": [
+        0.0105,
+        0.9998,
+        0.016
+      ],
+      "rms_mm_if_reflection_allowed": 0.4289886628963646,
+      "handedness_verdict": "same handedness"
+    },
+    "shot_002/prop.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/shot_002/prop.skel",
+      "n_markers": 4,
+      "correspondence_captury_to_motive": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "R_motive_to_captury": [
+        [
+          0.857307,
+          -0.006738,
+          0.514762
+        ],
+        [
+          0.00973,
+          0.999948,
+          -0.003116
+        ],
+        [
+          -0.514714,
+          0.00768,
+          0.857327
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "rms_mm": 0.4289886628963646,
+      "det": 1.0,
+      "angle_deg": 30.98624258259447,
+      "axis": [
+        0.0105,
+        0.9998,
+        0.016
+      ],
+      "rms_mm_if_reflection_allowed": 0.4289886628963646,
+      "handedness_verdict": "same handedness"
+    },
+    "shot_003/prop.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/shot_003/prop.skel",
+      "n_markers": 4,
+      "correspondence_captury_to_motive": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "R_motive_to_captury": [
+        [
+          0.857307,
+          -0.006738,
+          0.514762
+        ],
+        [
+          0.00973,
+          0.999948,
+          -0.003116
+        ],
+        [
+          -0.514714,
+          0.00768,
+          0.857327
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "rms_mm": 0.4289886628963646,
+      "det": 1.0,
+      "angle_deg": 30.98624258259447,
+      "axis": [
+        0.0105,
+        0.9998,
+        0.016
+      ],
+      "rms_mm_if_reflection_allowed": 0.4289886628963646,
+      "handedness_verdict": "same handedness"
+    },
+    "shot_005/jug.skel": {
+      "skel": "/Users/hxy/Desktop/core4d_refine_project/data/shot_005/jug.skel",
+      "n_markers": 4,
+      "correspondence_captury_to_motive": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "R_motive_to_captury": [
+        [
+          -0.99312,
+          0.010367,
+          0.116642
+        ],
+        [
+          0.011067,
+          0.999924,
+          0.005357
+        ],
+        [
+          -0.116578,
+          0.006611,
+          -0.99316
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        -0.0,
+        -0.0,
+        0.0
+      ],
+      "rms_mm": 0.491095044563299,
+      "det": 0.9999999999999998,
+      "angle_deg": 173.30338797601894,
+      "axis": [
+        0.0054,
+        1.0,
+        0.003
+      ],
+      "rms_mm_if_reflection_allowed": 0.491095044563299,
+      "handedness_verdict": "same handedness"
+    }
+  },
+  "drill": {
+    "shot_001/prop-2.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/shot_001/prop-2.skel",
+      "n_markers": 3,
+      "correspondence_captury_to_motive": [
+        2,
+        1,
+        0
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2
+      ],
+      "R_motive_to_captury": [
+        [
+          -0.955403,
+          -0.018895,
+          -0.294699
+        ],
+        [
+          -0.027917,
+          0.999261,
+          0.026436
+        ],
+        [
+          0.293982,
+          0.033484,
+          -0.955224
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        -0.0,
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.8585527358164325,
+      "det": 0.9999999999999992,
+      "angle_deg": 162.8786719752713,
+      "axis": [
+        -0.012,
+        0.9998,
+        0.0153
+      ],
+      "rms_mm_if_reflection_allowed": 0.8585527358164325,
+      "handedness_verdict": "degenerate (3 coplanar markers)"
+    },
+    "shot_002/prop-2.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/shot_002/prop-2.skel",
+      "n_markers": 3,
+      "correspondence_captury_to_motive": [
+        2,
+        1,
+        0
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2
+      ],
+      "R_motive_to_captury": [
+        [
+          -0.955403,
+          -0.018895,
+          -0.294699
+        ],
+        [
+          -0.027917,
+          0.999261,
+          0.026436
+        ],
+        [
+          0.293982,
+          0.033484,
+          -0.955224
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        -0.0,
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.8585527358164325,
+      "det": 0.9999999999999992,
+      "angle_deg": 162.8786719752713,
+      "axis": [
+        -0.012,
+        0.9998,
+        0.0153
+      ],
+      "rms_mm_if_reflection_allowed": 0.8585527358164325,
+      "handedness_verdict": "degenerate (3 coplanar markers)"
+    },
+    "shot_003/prop-2.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/shot_003/prop-2.skel",
+      "n_markers": 3,
+      "correspondence_captury_to_motive": [
+        2,
+        1,
+        0
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2
+      ],
+      "R_motive_to_captury": [
+        [
+          -0.955403,
+          -0.018895,
+          -0.294699
+        ],
+        [
+          -0.027917,
+          0.999261,
+          0.026436
+        ],
+        [
+          0.293982,
+          0.033484,
+          -0.955224
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        -0.0,
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.8585527358164325,
+      "det": 0.9999999999999992,
+      "angle_deg": 162.8786719752713,
+      "axis": [
+        -0.012,
+        0.9998,
+        0.0153
+      ],
+      "rms_mm_if_reflection_allowed": 0.8585527358164325,
+      "handedness_verdict": "degenerate (3 coplanar markers)"
+    },
+    "shot_005/Drill.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/align_drill_YCB/Assets/shot_005/Drill.skel",
+      "n_markers": 3,
+      "correspondence_captury_to_motive": [
+        0,
+        1,
+        2
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2
+      ],
+      "R_motive_to_captury": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "rms_mm": 3.1488934481903574e-14,
+      "det": 1.0000000000000007,
+      "angle_deg": 0.0,
+      "axis": [
+        -0.1737,
+        0.2257,
+        0.9586
+      ],
+      "rms_mm_if_reflection_allowed": 3.0729434129227956e-14,
+      "handedness_verdict": "degenerate (3 coplanar markers)"
+    }
+  },
+  "table": {
+    "shot_005/Table.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/align_drill_YCB/Assets/shot_005/Table.skel",
+      "n_markers": 5,
+      "correspondence_captury_to_motive": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "R_motive_to_captury": [
+        [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "rms_mm": 3.06605541446212e-05,
+      "det": 0.9999999999999998,
+      "angle_deg": 1.7075472925031877e-06,
+      "axis": [
+        0.9953,
+        -0.0929,
+        -0.0269
+      ],
+      "rms_mm_if_reflection_allowed": 3.06605541446212e-05,
+      "handedness_verdict": "same handedness"
+    },
+    "shot_018/table.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/5stardata/shot_018/table.skel",
+      "n_markers": 5,
+      "correspondence_captury_to_motive": [
+        3,
+        1,
+        2,
+        0,
+        4
+      ],
+      "captury_markers_used": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "R_motive_to_captury": [
+        [
+          -0.957385,
+          -0.005546,
+          0.288763
+        ],
+        [
+          -0.00227,
+          0.999929,
+          0.011679
+        ],
+        [
+          -0.288807,
+          0.010526,
+          -0.957329
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        -0.062121,
+        -0.029385,
+        -0.168934
+      ],
+      "rms_mm": 6.114562421064012,
+      "det": 0.9999999999999999,
+      "angle_deg": 163.2144668324375,
+      "axis": [
+        0.002,
+        -1.0,
+        -0.0057
+      ],
+      "rms_mm_if_reflection_allowed": 6.114562421064012,
+      "handedness_verdict": "same handedness"
+    },
+    "shot_031/table.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/5stardata/shot_031/table.skel",
+      "n_markers": 5,
+      "correspondence_captury_to_motive": [
+        3,
+        2,
+        1,
+        4,
+        0
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "R_motive_to_captury": [
+        [
+          0.924344,
+          0.008052,
+          0.381476
+        ],
+        [
+          -0.006765,
+          0.999966,
+          -0.004716
+        ],
+        [
+          -0.381501,
+          0.001779,
+          0.924367
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        0.154704,
+        -0.032306,
+        0.091143
+      ],
+      "rms_mm": 5.4733085881837225,
+      "det": 1.0000000000000002,
+      "angle_deg": 22.431242496619564,
+      "axis": [
+        -0.0085,
+        -0.9998,
+        0.0194
+      ],
+      "rms_mm_if_reflection_allowed": 5.4733085881837225,
+      "handedness_verdict": "same handedness"
+    },
+    "0728_shot_007/Table.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/0728_data/0728_shot_007/Table.skel",
+      "n_markers": 5,
+      "correspondence_captury_to_motive": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "R_motive_to_captury": [
+        [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "rms_mm": 3.06605541446212e-05,
+      "det": 0.9999999999999998,
+      "angle_deg": 1.7075472925031877e-06,
+      "axis": [
+        0.9953,
+        -0.0929,
+        -0.0269
+      ],
+      "rms_mm_if_reflection_allowed": 3.06605541446212e-05,
+      "handedness_verdict": "same handedness"
+    },
+    "0728_shot_020/Table.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/0728_data/0728_shot_020/Table.skel",
+      "n_markers": 5,
+      "correspondence_captury_to_motive": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "R_motive_to_captury": [
+        [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "rms_mm": 3.06605541446212e-05,
+      "det": 0.9999999999999998,
+      "angle_deg": 1.7075472925031877e-06,
+      "axis": [
+        0.9953,
+        -0.0929,
+        -0.0269
+      ],
+      "rms_mm_if_reflection_allowed": 3.06605541446212e-05,
+      "handedness_verdict": "same handedness"
+    }
+  },
+  "crate": {
+    "shot_012/Crate.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/new_data_0716/shot_012/Crate.skel",
+      "n_markers": 6,
+      "correspondence_captury_to_motive": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "R_motive_to_captury": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "rms_mm": 9.859832594197727e-06,
+      "det": 1.0000000000000007,
+      "angle_deg": 0.0,
+      "axis": [
+        0.189,
+        -0.2375,
+        0.9528
+      ],
+      "rms_mm_if_reflection_allowed": 9.859832594197727e-06,
+      "handedness_verdict": "same handedness"
+    },
+    "0728_shot_020/Crate.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/0728_data/0728_shot_020/Crate.skel",
+      "n_markers": 6,
+      "correspondence_captury_to_motive": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "R_motive_to_captury": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "rms_mm": 9.859832594197727e-06,
+      "det": 1.0000000000000007,
+      "angle_deg": 0.0,
+      "axis": [
+        0.189,
+        -0.2375,
+        0.9528
+      ],
+      "rms_mm_if_reflection_allowed": 9.859832594197727e-06,
+      "handedness_verdict": "same handedness"
+    }
+  },
+  "chair": {
+    "shot_031/chair.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/5stardata/shot_031/chair.skel",
+      "n_markers": 4,
+      "correspondence_captury_to_motive": [
+        0,
+        4,
+        2,
+        1
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "R_motive_to_captury": [
+        [
+          -0.79567,
+          -0.000533,
+          0.605731
+        ],
+        [
+          0.007272,
+          0.999919,
+          0.010431
+        ],
+        [
+          -0.605687,
+          0.012705,
+          -0.795601
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        -0.062677,
+        -0.063167,
+        0.053177
+      ],
+      "rms_mm": 2.080856286745626,
+      "det": 1.0000000000000002,
+      "angle_deg": 142.71913728068043,
+      "axis": [
+        0.0019,
+        1.0,
+        0.0064
+      ],
+      "rms_mm_if_reflection_allowed": 2.080856286745626,
+      "handedness_verdict": "same handedness"
+    }
+  },
+  "football": {
+    "shot_018/football.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/5stardata/shot_018/football.skel",
+      "n_markers": 5,
+      "correspondence_captury_to_motive": [
+        2,
+        0,
+        1,
+        3,
+        4
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "R_motive_to_captury": [
+        [
+          0.43561,
+          -0.884733,
+          0.165807
+        ],
+        [
+          0.686063,
+          0.445578,
+          0.575133
+        ],
+        [
+          -0.582718,
+          -0.13678,
+          0.801081
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "rms_mm": 2.6092885582467065,
+      "det": 1.0000000000000002,
+      "angle_deg": 70.05398613671314,
+      "axis": [
+        -0.3787,
+        0.3981,
+        0.8355
+      ],
+      "rms_mm_if_reflection_allowed": 2.6092885582467065,
+      "handedness_verdict": "same handedness"
+    }
+  },
+  "hammer": {
+    "0728_shot_007/Hammer.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/0728_data/0728_shot_007/Hammer.skel",
+      "n_markers": 4,
+      "correspondence_captury_to_motive": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "R_motive_to_captury": [
+        [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "rms_mm": 4.321581591188118e-06,
+      "det": 0.9999999999999996,
+      "angle_deg": 1.2074182697257333e-06,
+      "axis": [
+        0.7311,
+        0.5734,
+        0.3697
+      ],
+      "rms_mm_if_reflection_allowed": 4.321581591188118e-06,
+      "handedness_verdict": "same handedness"
+    }
+  },
+  "spray": {
+    "0728_shot_020/Spray.skel": {
+      "skel": "/Users/hxy/Desktop/YCB/0728_data/0728_shot_020/Spray.skel",
+      "n_markers": 4,
+      "correspondence_captury_to_motive": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "captury_markers_used": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "R_motive_to_captury": [
+        [
+          1.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "t_motive_to_captury_m": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "rms_mm": 4.939111191535506e-06,
+      "det": 1.0,
+      "angle_deg": 0.0,
+      "axis": [
+        -0.4331,
+        -0.768,
+        0.4718
+      ],
+      "rms_mm_if_reflection_allowed": 4.939111191535506e-06,
+      "handedness_verdict": "same handedness"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[stage] loading...
+[stage] loaded, nodes: 84
+[stage] anim_stacks count: 1
+[stage] got stack[0]: Take 001
+[stage] stack.time_begin: 0.0
+[stage] stack.time_end: 9.733333999420346
+[stage] stack.layers count: 1
+[stage] got stack.anim, type: <class 'ufbx.Anim'>
+[stage] anim.time_begin: 0.0
+[stage] anim.time_end: 9.733333999420346
+[stage] ALL DONE
