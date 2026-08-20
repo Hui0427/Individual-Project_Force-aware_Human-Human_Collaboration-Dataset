@@ -97,6 +97,9 @@ def main():
                          "scanned YCB meshes (~16k faces), sampled for the Tripo meshes "
                          "(~2M faces), where exact is intractable and the denser surface "
                          "makes sampling more accurate anyway.")
+    ap.add_argument("--exact-chunk", type=int, default=2000,
+                    help="query points per batch in exact mode; keeps the "
+                         "points x faces intermediate from exhausting memory")
     ap.add_argument("--auto-sample-threshold", type=int, default=200_000,
                     help="face count above which --sampled -1 switches to sampling")
     args = ap.parse_args()
@@ -132,8 +135,15 @@ def main():
         pq = trimesh.proximity.ProximityQuery(mesh)
 
         def query(points):
-            return pq.on_surface(points)
-        mode = "exact point-to-triangle"
+            # trimesh materialises an (n_points x n_faces) intermediate, so a whole take
+            # at once (~90k points x 16k faces) is an OOM kill. Chunk it.
+            chunk = max(1, args.exact_chunk)
+            cp, dd, tt = [], [], []
+            for i in range(0, len(points), chunk):
+                c, d_, t_ = pq.on_surface(points[i:i + chunk])
+                cp.append(c); dd.append(d_); tt.append(t_)
+            return np.vstack(cp), np.concatenate(dd), np.concatenate(tt)
+        mode = f"exact point-to-triangle (chunks of {args.exact_chunk})"
 
     print(f"mesh: {len(mesh.faces)} faces, aligned into {args.object} Hips frame "
           f"(take {args.take}, scale {S.tolist()}), distance mode: {mode}")
