@@ -88,11 +88,17 @@ def main():
                     help="flag frames with signed distance below -this")
     ap.add_argument("--jump-mm", type=float, default=30.0,
                     help="flag per-joint frame-to-frame distance jumps above this")
-    ap.add_argument("--sampled", type=int, default=0, metavar="N",
-                    help="fast mode: query a KD-tree of N surface samples instead of "
-                         "exact point-to-triangle. Distance is overestimated by at most "
-                         "the sample spacing (~0.5 mm at N=500k on these objects), "
-                         "negligible against a 15 mm contact threshold.")
+    ap.add_argument("--sampled", type=int, default=-1, metavar="N",
+                    help="Query a KD-tree of N surface samples instead of exact "
+                         "point-to-triangle. Overestimates distance by at most the "
+                         "sample spacing (measured 0.02+-0.03 mm at N=500k, max 0.22 mm), "
+                         "negligible against a 15 mm contact threshold. "
+                         "0 forces exact; -1 (default) picks automatically: exact for "
+                         "scanned YCB meshes (~16k faces), sampled for the Tripo meshes "
+                         "(~2M faces), where exact is intractable and the denser surface "
+                         "makes sampling more accurate anyway.")
+    ap.add_argument("--auto-sample-threshold", type=int, default=200_000,
+                    help="face count above which --sampled -1 switches to sampling")
     args = ap.parse_args()
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -105,6 +111,13 @@ def main():
 
     mesh = trimesh.load(args.mesh, force="mesh")
     mesh.vertices = (mesh.vertices * S) @ R_geo.T + t_geo
+
+    n_sampled = args.sampled
+    if n_sampled < 0:
+        n_sampled = 500_000 if len(mesh.faces) > args.auto_sample_threshold else 0
+        print(f"mesh has {len(mesh.faces):,} faces -> "
+              f"{'sampled' if n_sampled else 'exact'} mode (auto)")
+    args.sampled = n_sampled
 
     if args.sampled > 0:
         from scipy.spatial import cKDTree

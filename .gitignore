@@ -25,3 +25,12 @@ outputs/**/*.anim
 
 # 内部交接笔记，不公开
 HANDOFF.md
+
+# 权重消融实验的中间目录（full/gated/smooth）——结论已写进
+# optimize_hand_pose.py 的 --w 帮助文本，产物本身是可重生成的 npz/anim
+outputs/hand_refine_*_full/
+outputs/hand_refine_*_gated/
+outputs/hand_refine_*_smooth/
+
+# 手套导出的 Unity JSON，可由 scripts/wuji/wuji_to_unity.py 重生成
+outputs/wuji/*.json

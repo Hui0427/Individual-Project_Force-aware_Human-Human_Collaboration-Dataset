@@ -2,13 +2,14 @@
 # 本文件同时是合法 JSON,所以不装 pyyaml 也能读。
 {
   "defaults": {
-    "persons": ["person1", "person2"],
+    "persons": [
+      "person1",
+      "person2"
+    ],
     "contact_thr_mm": 15.0,
-    "iters": 300,
-    "mode": "anatomical",
-    "sampled": 500000
+    "iters": 400,
+    "mode": "anatomical"
   },
-
   "takes": {
     "drill_shot005": {
       "object": "drill",
@@ -16,10 +17,15 @@
       "object_fbx": "Drill",
       "data_dir": "/Users/hxy/Desktop/YCB/new_data_0716/shot_005",
       "mesh": "/Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj",
-      "refine_persons": ["person1"],
-      "frames": [150, 270]
+      "refine_persons": [
+        "person1",
+        "person2"
+      ],
+      "frames": [
+        0,
+        -1
+      ]
     },
-
     "drill_shot007": {
       "object": "drill",
       "take_key": "shot_007/Drill.skel",
@@ -27,15 +33,21 @@
       "data_dir": "/Users/hxy/Desktop/YCB/new_data_0716/shot_007",
       "mesh": "/Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj"
     },
-
     "crate_shot012": {
       "object": "crate",
       "take_key": "shot_012/Crate.skel",
       "object_fbx": "Crate",
       "data_dir": "/Users/hxy/Desktop/YCB/new_data_0716/shot_012",
-      "mesh": "/Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj"
+      "mesh": "/Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj",
+      "refine_persons": [
+        "person1",
+        "person2"
+      ],
+      "frames": [
+        0,
+        -1
+      ]
     },
-
     "hammer_0728shot007": {
       "object": "hammer",
       "take_key": "0728_shot_007/Hammer.skel",
@@ -43,7 +55,6 @@
       "data_dir": "/Users/hxy/Desktop/YCB/0728_data/0728_shot_007",
       "mesh": "/Users/hxy/Desktop/YCB/048_hammer/google_16k/textured.obj"
     },
-
     "spray_0728shot020": {
       "object": "spray",
       "take_key": "0728_shot_020/Spray.skel",

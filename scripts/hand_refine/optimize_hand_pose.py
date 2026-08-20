@@ -18,6 +18,7 @@ Design (per project plan):
 import argparse
 import csv
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -84,8 +85,14 @@ def main():
     ap.add_argument("--out-dir", required=True)
     ap.add_argument("--iters", type=int, default=300)
     ap.add_argument("--contact-thr-mm", type=float, default=15.0)
-    ap.add_argument("--w", nargs=5, type=float, default=[1e4, 2e4, 1.0, 20.0, 10.0],
-                    metavar=("CONTACT", "PEN", "DEV", "TEMP", "LIMIT"))
+    ap.add_argument("--w", nargs=5, type=float, default=[1e4, 2e4, 1.0, 2e4, 10.0],
+                    metavar=("CONTACT", "PEN", "DEV", "TEMP", "LIMIT"),
+                    help="TEMP was 20 originally, which left the physical terms ~4e5 "
+                         "times larger - each frame effectively solved on its own and "
+                         "fingertip jerk rose 4-9x above the source animation. A sweep "
+                         "on crate/shot_012 (20 / 2e3 / 2e4 / 1e5) put the knee at 2e4: "
+                         "jerk back to the original 0.536 mm/frame^3 with contact "
+                         "unchanged (-4.38 vs -4.26 mm); 1e5 starts costing contact.")
     ap.add_argument("--mode", choices=["anatomical", "free"], default="anatomical",
                     help="anatomical: finger joints move only along the hinge axes "
                          "recovered from this take's own motion, within the observed "
@@ -94,16 +101,65 @@ def main():
                          "anatomically illegal poses - kept for comparison).")
     ap.add_argument("--wrist-cap-deg", type=float, default=15.0)
     ap.add_argument("--range-margin-deg", type=float, default=5.0)
+    ap.add_argument("--adaptive-deviation", choices=["on", "off"], default="on",
+                    help="on: weight the deviation term by per-frame/per-joint confidence "
+                         "in the Captury pose, so implausible tracking (folded fingers, "
+                         "one-frame pops) stops anchoring the solution. off: uniform.")
+    ap.add_argument("--conf-floor", type=float, default=0.05,
+                    help="minimum deviation weight, so no frame is fully unanchored")
+    ap.add_argument("--gate-near-mm", type=float, default=20.0,
+                    help="physical terms at full strength within this surface distance")
+    ap.add_argument("--gate-far-mm", type=float, default=80.0,
+                    help="physical terms fade to zero beyond this distance, so a "
+                         "mistracked object cannot drag a distant hand around")
+    ap.add_argument("--smooth-object", type=int, default=5, metavar="W",
+                    help="temporal smoothing window on the object pose used by the "
+                         "physical terms (0 = off). These exports are 30 fps sampled at "
+                         "60, so the object advances in a staircase while the hands are "
+                         "interpolated smooth; without this the terms chatter.")
+    ap.add_argument("--pen-cap-mm", type=float, default=25.0,
+                    help="Capsule samples that ALREADY sit deeper than this in the input "
+                         "pose are excluded from the physical terms entirely (mask fixed "
+                         "from the original pose, so it cannot be gamed by moving). "
+                         "Photogrammetry meshes are closed shells - Tripo caps the crate's "
+                         "open top and its handle holes, verified by ray casting (odd hit "
+                         "counts from the cavity centre) and by where the deep samples "
+                         "actually sit: clustered at one end, 100%% in the upper half, "
+                         "i.e. fingers hooked into a grip the mesh has filled in. Such a "
+                         "sample is either in a real cavity or grossly mistracked, and "
+                         "pushing it out is wrong either way. Truncating the loss VALUE "
+                         "was not enough - the gradient still acted right up to the cap. "
+                         "0 disables the mask.")
+    ap.add_argument("--cavity-voxel-m", type=float, default=0.02)
+    ap.add_argument("--cavity-min-frames", type=int, default=20,
+                    help="a voxel counts as cavity only after the hand has been in it on "
+                         "this many distinct frames, so one mistracked moment cannot "
+                         "carve a hole through the object")
+    ap.add_argument("--object-gate", choices=["on", "off"], default="on",
+                    help="on: also switch the physical terms off on frames where the "
+                         "object's own trajectory looks mistracked (jumps/teleports)")
     args = ap.parse_args()
     out = Path(args.out_dir); out.mkdir(parents=True, exist_ok=True)
     f0, f1 = args.frames
-    Fseg = f1 - f0
+    if f1 < 0:
+        f1 = None   # resolved after the npz is loaded
+    Fseg = None
 
     d = np.load(args.locals)
     T, Q, names = d["local_t_mm"] / 1000.0, d["local_q_xyzw"], [str(x) for x in d["names"]]
     parent_idx = d["parent_idx"]
     ni = {n: i for i, n in enumerate(names)}
     P = args.person
+    # The person and object exports can differ by a frame or two, so every segment is
+    # clamped to what both sources actually cover.
+    n_obj = sum(1 for _ in csv.DictReader(open(args.object_pose)))
+    n_common = min(Q.shape[0], n_obj)
+    if f1 is None:
+        f1 = n_common
+    f1 = min(f1, n_common)
+    Fseg = f1 - f0
+    print(f"segment: frames {f0}..{f1} ({Fseg} frames)  "
+          f"[skeleton {Q.shape[0]}, object {n_obj}]")
 
     # ---- original world poses (numpy FK) + sanity check against earlier extraction ----
     wt, wq = np_fk_world(T, Q, parent_idx)
@@ -126,6 +182,21 @@ def main():
                 opt_joints.append(ni[f"{P}:{s}Hand{fg}{lvl}"])
     ee = {(s, fg): ni[f"{P}:{s}Hand{fg}EE"] for s in sides for fg in FINGERS}
     forearm = {s: ni[f"{P}:{s}ForeArm"] for s in sides}
+
+    # ---- confidence in the Captury pose, computed over the WHOLE take so the robust
+    # statistics are not set by whatever happens inside the chosen segment ----
+    if args.adaptive_deviation == "on":
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from pose_confidence import joint_confidence, summarize
+        conf_full, _ = joint_confidence(Q, opt_joints)
+        conf_seg = np.clip(conf_full[f0:f1], args.conf_floor, 1.0)
+        print(summarize(conf_full, [names[j].split(":", 1)[-1] for j in opt_joints]))
+        print(f"deviation weighting: adaptive (segment mean {conf_seg.mean():.3f}, "
+              f"min {conf_seg.min():.3f})")
+    else:
+        conf_seg = np.ones((Fseg, 32))
+        print("deviation weighting: uniform")
+    conf_t = torch.tensor(conf_seg, dtype=torch.float32)[:, :, None]   # (F,32,1)
 
     dev = torch.device("cpu")
     q_orig = torch.tensor(Q[f0:f1, opt_joints], dtype=torch.float32)          # (F,32,4)
@@ -219,6 +290,64 @@ def main():
     sp_t = torch.tensor(sp, dtype=torch.float32)
     sn_t = torch.tensor(mesh.face_normals[sf], dtype=torch.float32)
 
+    # ---- gates: the object may only influence the hand when it is (a) tracked
+    # plausibly and (b) actually near it. Both are computed from input data, never
+    # from the optimiser state, so they cannot be gamed by pushing the hand away. ----
+    from object_confidence import (object_confidence, proximity_gate,
+                                   summarize as osum, detect_duplicate_frames,
+                                   smooth_object_pose)
+    dup = detect_duplicate_frames(t_o.numpy())
+    if args.smooth_object > 0:
+        t_sm, R_sm = smooth_object_pose(t_o.numpy(), Rotation.from_matrix(R_o.numpy()),
+                                        args.smooth_object)
+        moved = np.linalg.norm(t_sm - t_o.numpy(), axis=1).max() * 1000
+        print(f"object pose: {dup*100:.0f}% duplicate frames (30fps sampled at 60); "
+              f"smoothing w={args.smooth_object} moved it by at most {moved:.1f} mm")
+        t_o = torch.tensor(t_sm, dtype=torch.float32)
+        R_o = torch.tensor(R_sm.as_matrix(), dtype=torch.float32)
+    else:
+        print(f"object pose: {dup*100:.0f}% duplicate frames, smoothing OFF")
+    if args.object_gate == "on":
+        obj_conf = object_confidence(t_o.numpy(), Rotation.from_matrix(R_o.numpy()))
+    else:
+        obj_conf = np.ones(Fseg)
+
+    min_d = np.full(Fseg, 1e9)
+    for r in csv.DictReader(open(args.distances)):
+        f = int(r["frame"])
+        if r["person"] != P or not (f0 <= f < f1):
+            continue
+        min_d[f - f0] = min(min_d[f - f0], float(r["signed_dist_mm"]))
+    min_d[min_d > 1e8] = 1e9
+    gate = proximity_gate(min_d, args.gate_near_mm, args.gate_far_mm)
+    print(osum(obj_conf, gate))
+    w_phys = torch.tensor(obj_conf * gate, dtype=torch.float32)[:, None]   # (F,1)
+
+    # Per-sample mask: freeze whatever was already deep inside the (closed) mesh.
+    with torch.no_grad():
+        pts0, rad0, _ = capsule_points(fk_hands(torch.zeros(Fseg, 32, 3))[0])
+        loc0 = torch.einsum("fij,fsj->fsi", R_o.transpose(1, 2), pts0 - t_o[:, None, :])
+        d0, i0 = tree.query(loc0.reshape(-1, 3).numpy())
+        s0 = np.sign(np.einsum("ij,ij->i", loc0.reshape(-1, 3).numpy() - sp[i0], mesh.face_normals[sf][i0]))
+        signed0 = (s0 * d0).reshape(Fseg, -1) * 1000 - rad0.numpy() * 1000
+    if args.pen_cap_mm > 0:
+        # Which interior regions are actually free space is inferred from where the hand
+        # repeatedly goes (see cavity_from_occupancy). Masking by depth alone fails: at
+        # sample level the joints drag frozen points along anyway, and at finger level it
+        # mutes exactly the fingers doing the gripping.
+        from cavity_from_occupancy import cavity_voxels, is_cavity
+        inside0 = signed0 <= -args.pen_cap_mm
+        cav = cavity_voxels(loc0.numpy(), inside0, args.cavity_voxel_m,
+                            args.cavity_min_frames)
+        in_cav = is_cavity(loc0.numpy(), cav)
+        n_vox = int(cav[2].sum()) if cav else 0
+        print(f"cavity from occupancy: {n_vox} voxels ({args.cavity_voxel_m*100:g} cm, "
+              f"seen on >={args.cavity_min_frames} frames) covering "
+              f"{in_cav.mean()*100:.1f}% of samples")
+    else:
+        cav = None
+    valid = torch.ones(Fseg, signed0.shape[1])
+
     # ---- contact targets from the annotation ----
     thr = args.contact_thr_mm
     contact = {}   # (frame_local, side, finger) -> True
@@ -283,7 +412,17 @@ def main():
         s_pts = sp_t[nn_idx].reshape(loc.shape)
         s_nrm = sn_t[nn_idx].reshape(loc.shape)
         vec = loc - s_pts
-        signed = (vec * s_nrm).sum(-1).sign() * vec.norm(dim=-1) - rad   # (F,S)
+        sgn = (vec * s_nrm).sum(-1).sign()
+        if cav is not None:
+            # A sample inside an inferred cavity is in FREE SPACE touching the inner
+            # wall, not buried in material: force its distance positive so the field is
+            # physically correct. Fixing the field beats masking the loss - a mask leaks
+            # through the kinematic chain (joints are shared by every sample on a finger),
+            # which is why sample-, finger- and voxel-level masks all failed to hold.
+            with torch.no_grad():
+                inc = torch.tensor(is_cavity(loc.detach().numpy(), cav))
+            sgn = torch.where(inc, torch.ones_like(sgn), sgn)
+        signed = sgn * vec.norm(dim=-1) - rad   # (F,S)
 
         cmask = torch.zeros_like(signed, dtype=torch.bool)
         for si, (s, fg, lvl) in enumerate(tags):
@@ -292,9 +431,11 @@ def main():
                     if contact.get((f, s, fg)):
                         cmask[f, si] = True
 
-        L_contact = (signed.clamp(min=0)[cmask] ** 2).mean() if cmask.any() else signed.sum() * 0
-        L_pen = (signed.clamp(max=0) ** 2).mean()
-        L_dev = (delta ** 2).mean()
+        gw = w_phys.expand_as(signed) * valid
+        L_contact = ((gw * signed.clamp(min=0) ** 2)[cmask].mean()
+                     if cmask.any() else signed.sum() * 0)
+        L_pen = (gw * signed.clamp(max=0) ** 2).mean()
+        L_dev = (conf_t * delta ** 2).mean()   # low confidence -> weak anchor
         L_temp = ((delta[1:] - delta[:-1]) ** 2).mean()
         L_lim = limit_loss(delta)
         loss = wC * L_contact + wP * L_pen + wD * L_dev + wT * L_temp + wL * L_lim

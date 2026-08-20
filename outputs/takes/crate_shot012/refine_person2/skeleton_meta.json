@@ -1,0 +1,177 @@
+{
+  "person": "person2",
+  "object": "crate",
+  "take": "shot_012/Crate.skel",
+  "frames": [
+    0,
+    969
+  ],
+  "fps": 60.0,
+  "opt_joints": [
+    "person2:LeftHand",
+    "person2:LeftHandThumb1",
+    "person2:LeftHandThumb2",
+    "person2:LeftHandThumb3",
+    "person2:LeftHandIndex1",
+    "person2:LeftHandIndex2",
+    "person2:LeftHandIndex3",
+    "person2:LeftHandMiddle1",
+    "person2:LeftHandMiddle2",
+    "person2:LeftHandMiddle3",
+    "person2:LeftHandRing1",
+    "person2:LeftHandRing2",
+    "person2:LeftHandRing3",
+    "person2:LeftHandPinky1",
+    "person2:LeftHandPinky2",
+    "person2:LeftHandPinky3",
+    "person2:RightHand",
+    "person2:RightHandThumb1",
+    "person2:RightHandThumb2",
+    "person2:RightHandThumb3",
+    "person2:RightHandIndex1",
+    "person2:RightHandIndex2",
+    "person2:RightHandIndex3",
+    "person2:RightHandMiddle1",
+    "person2:RightHandMiddle2",
+    "person2:RightHandMiddle3",
+    "person2:RightHandRing1",
+    "person2:RightHandRing2",
+    "person2:RightHandRing3",
+    "person2:RightHandPinky1",
+    "person2:RightHandPinky2",
+    "person2:RightHandPinky3"
+  ],
+  "bone_lengths_mm": {
+    "person2:LeftHand": 220.14141845703125,
+    "person2:LeftHandThumb1": 25.796973381120033,
+    "person2:LeftHandThumb2": 34.8093147277832,
+    "person2:LeftHandThumb3": 27.2611083984375,
+    "person2:LeftHandIndex1": 77.87936770490958,
+    "person2:LeftHandIndex2": 34.114501953125,
+    "person2:LeftHandIndex3": 22.74298095703125,
+    "person2:LeftHandMiddle1": 78.39454818243243,
+    "person2:LeftHandMiddle2": 35.6287841796875,
+    "person2:LeftHandMiddle3": 26.5321044921875,
+    "person2:LeftHandRing1": 73.7257511977529,
+    "person2:LeftHandRing2": 34.11083984375,
+    "person2:LeftHandRing3": 26.53070068359375,
+    "person2:LeftHandPinky1": 74.96250245825365,
+    "person2:LeftHandPinky2": 30.31915283203125,
+    "person2:LeftHandPinky3": 15.15960693359375,
+    "person2:RightHand": 220.14141845703125,
+    "person2:RightHandThumb1": 25.796973381120033,
+    "person2:RightHandThumb2": 34.8093147277832,
+    "person2:RightHandThumb3": 27.2611083984375,
+    "person2:RightHandIndex1": 77.87936770490958,
+    "person2:RightHandIndex2": 34.114501953125,
+    "person2:RightHandIndex3": 22.74298095703125,
+    "person2:RightHandMiddle1": 78.39454818243243,
+    "person2:RightHandMiddle2": 35.6287841796875,
+    "person2:RightHandMiddle3": 26.5321044921875,
+    "person2:RightHandRing1": 73.7257511977529,
+    "person2:RightHandRing2": 34.11083984375,
+    "person2:RightHandRing3": 26.53070068359375,
+    "person2:RightHandPinky1": 74.96250245825365,
+    "person2:RightHandPinky2": 30.31915283203125,
+    "person2:RightHandPinky3": 15.15960693359375
+  },
+  "weights": {
+    "contact": 10000.0,
+    "pen": 20000.0,
+    "dev": 1.0,
+    "temp": 20000.0,
+    "limit": 10.0
+  },
+  "delta_deg": {
+    "mean": 3.445091962814331,
+    "max": 45.526363372802734
+  },
+  "metrics_after": {
+    "contact_mean_mm": -1.24928278120785,
+    "worst_pen_mm": -25.644393110152475,
+    "pen_frac": 0.23087948629744295
+  },
+  "log": [
+    {
+      "it": 0,
+      "loss": 2.993180274963379,
+      "contact": 0.0002814531035255641,
+      "pen": 8.932464879762847e-06,
+      "dev": 0.0,
+      "temp": 0.0,
+      "lim": 0.0
+    },
+    {
+      "it": 50,
+      "loss": 0.708757221698761,
+      "contact": 1.4657753126812167e-06,
+      "pen": 3.3501783036626875e-05,
+      "dev": 0.002419346012175083,
+      "temp": 1.0409945616629557e-06,
+      "lim": 8.245554636232555e-05
+    },
+    {
+      "it": 100,
+      "loss": 0.6257697343826294,
+      "contact": 1.6936041902226862e-06,
+      "pen": 2.9176797397667542e-05,
+      "dev": 0.0026173873338848352,
+      "temp": 1.0965929959638743e-06,
+      "lim": 7.484451634809375e-05
+    },
+    {
+      "it": 150,
+      "loss": 0.552288293838501,
+      "contact": 1.8277909248354263e-06,
+      "pen": 2.540710920584388e-05,
+      "dev": 0.0027773017063736916,
+      "temp": 1.1041911420761608e-06,
+      "lim": 0.0001007154060062021
+    },
+    {
+      "it": 200,
+      "loss": 0.5093717575073242,
+      "contact": 1.9439835341472644e-06,
+      "pen": 2.313562981726136e-05,
+      "dev": 0.002964315004646778,
+      "temp": 1.1556755907804472e-06,
+      "lim": 0.0001141485117841512
+    },
+    {
+      "it": 250,
+      "loss": 0.4707764983177185,
+      "contact": 1.9447652448434383e-06,
+      "pen": 2.1145362552488223e-05,
+      "dev": 0.003332520602270961,
+      "temp": 1.1956777825616882e-06,
+      "lim": 0.00011754980369005352
+    },
+    {
+      "it": 300,
+      "loss": 0.42741450667381287,
+      "contact": 1.9883516415575286e-06,
+      "pen": 1.8957998690893874e-05,
+      "dev": 0.003899605479091406,
+      "temp": 1.1680245961542823e-06,
+      "lim": 0.00011109256593044847
+    },
+    {
+      "it": 350,
+      "loss": 0.38421890139579773,
+      "contact": 2.029825509453076e-06,
+      "pen": 1.6763689927756786e-05,
+      "dev": 0.00459995586425066,
+      "temp": 1.153798393715988e-06,
+      "lim": 9.709237929200754e-05
+    },
+    {
+      "it": 399,
+      "loss": 0.34619662165641785,
+      "contact": 2.2099413854448358e-06,
+      "pen": 1.4746257875231095e-05,
+      "dev": 0.005356918089091778,
+      "temp": 1.1352509545758949e-06,
+      "lim": 0.00011101237032562494
+    }
+  ]
+}

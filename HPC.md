@@ -1,88 +1,105 @@
-# 在 HPC 上跑 HOI 距离流水线
+# 在 HPC 上跑 HOI 流水线
 
-脚本已全部参数化,**没有任何硬编码数据路径**(标定脚本除外——标定已完成,不需要在 HPC 重跑)。
-需要上传的只有三样:
+标定(mesh→rigid body)已经做完,**HPC 上不需要跑标定**。需要上传的只有:
 
 ```
-scripts/                      # 五个下游脚本
+scripts/                      # 全部脚本
 outputs/mesh_offsets.json     # 标定结果(纯数字,与机器无关)
+takes.yaml                    # take 配置(把路径改成集群上的)
 requirements.txt
 ```
 
 ## 一次性环境
 
 ```bash
-module load python  # 或集群对应的方式
+module load python            # 或集群对应的方式
 python -m venv ~/venvs/hoi
 source ~/venvs/hoi/bin/activate
 pip install -r requirements.txt
 ```
 
-## 每条 take 三步(路径全是变量,按你的 HPC 数据位置改)
+## 用法:一条命令跑一条 take
+
+所有参数都写在 `takes.yaml` 里,命令行不用填路径:
 
 ```bash
-DATA=/path/to/your/shot_005          # take 文件夹(含 *.fbx)
-MESH=/path/to/035_power_drill/google_16k/textured.obj
-OUT=~/hoi_out/drill_shot005
-
-python scripts/extract_object_pose.py        $DATA/Drill.fbx   $OUT/drill_pose.csv
-python scripts/extract_person_hand_joints.py $DATA/person1.fbx $OUT/person1_hand_joints.csv
-python scripts/extract_person_hand_joints.py $DATA/person2.fbx $OUT/person2_hand_joints.csv
-
-python scripts/compute_hand_object_distances.py \
-    --object drill --take "shot_005/Drill.skel" \
-    --mesh $MESH --object-pose $OUT/drill_pose.csv \
-    --hands $OUT/person1_hand_joints.csv $OUT/person2_hand_joints.csv \
-    --out-dir $OUT          # 默认精确模式(完整版);加 --sampled 500000 可提速 ~60 倍
-
-python scripts/plot_hoi_results.py --out-dir $OUT --mesh $MESH \
-    --object drill --take "shot_005/Drill.skel"
+python scripts/run_take.py --config takes.yaml --take drill_shot005     # 单条
+python scripts/run_take.py --config takes.yaml --all                    # 全部
+python scripts/run_take.py --config takes.yaml --all --stages refine,export   # 只重跑某几步
 ```
 
-注意:
-- `--take` 是 `mesh_offsets.json` 里 `takes{}` 的 key,**不是路径**,别改成 HPC 路径
-- **默认就是精确模式(完整版)**,单 take 约 10-20 分钟。`--sampled 500000` 是快速模式
-  (单 take 约 10 秒),实测 vs 精确解误差 0.02±0.03mm(500 点抽查,最大 0.22mm)
-- 单条 take 本地都只要几十秒(提取)+10 秒(距离),HPC 的价值在**批量并行**,不在单条提速
+四个阶段:`extract`(提取位姿/手关节/局部旋转)→ `annotate`(距离+contact+图)
+→ `refine`(手部姿态优化)→ `export`(Unity .anim + 回放 json)。
 
-## SLURM 批量模板(job array,每个任务一条 take)
+**已存在的产出会自动跳过**,失败重跑不用从头来;要强制重算加 `--force`。
+某条 take 失败不会中断其余,最后统一报告。每条 take 有独立 `run.log`。
+
+## takes.yaml 要改什么
+
+只改路径两项,其余照抄:
+
+```yaml
+"drill_shot005": {
+  "object": "drill",                      # mesh_offsets.json 里的物体名
+  "take_key": "shot_005/Drill.skel",      # mesh_offsets.json 里的 key,不是路径!
+  "object_fbx": "Drill",                  # take 文件夹里物体 fbx 的文件名
+  "data_dir": "/集群上/shot_005",          # ← 改这里
+  "mesh": "/集群上/035_power_drill/google_16k/textured.obj",   # ← 和这里
+  "refine_persons": ["person1"],          # 要优化谁的手(省略=全部)
+  "frames": [0, -1]                       # [0,-1] = 整条 take;也可以给 [150,270]
+}
+```
+
+`defaults` 段里的全局项:
+
+| 项 | 说明 |
+|---|---|
+| `sampled` | **删掉这一行 = 精确模式(完整版)**,单 take 10~20 分钟。填 500000 是快速模式(~10 秒,实测误差 0.02±0.03mm) |
+| `contact_thr_mm` | contact 阈值,默认 15(关节中心 + 指半径 + 标定误差底,依据见 README) |
+| `iters` | 优化迭代次数,默认 300;整条 take 建议 400 |
+| `mode` | `anatomical`(默认,关节只沿自身铰链轴动)/ `free`(无约束,会产生不像人手的姿态,仅供对比) |
+
+## SLURM job array
 
 ```bash
 #!/bin/bash
 #SBATCH --job-name=hoi
-#SBATCH --array=0-5           # take 数量 - 1
-#SBATCH --cpus-per-task=2
-#SBATCH --mem=8G
-#SBATCH --time=02:00:00   # 精确模式留足余量
+#SBATCH --array=0-4            # take 数量 - 1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16G
+#SBATCH --time=04:00:00        # 精确模式 + 整条 take 优化,留足余量
 
 source ~/venvs/hoi/bin/activate
 cd ~/core4d_refine_project
 
-# 每行: 物体名  take_key  take数据目录  mesh路径  物体fbx名
-TAKES=(
-  "drill  shot_005/Drill.skel        /data/.../new_data_0716/shot_005  /data/.../035_power_drill/google_16k/textured.obj  Drill"
-  "drill  shot_007/Drill.skel        /data/.../new_data_0716/shot_007  /data/.../035_power_drill/google_16k/textured.obj  Drill"
-  "hammer 0728_shot_007/Hammer.skel  /data/.../0728_data/0728_shot_007 /data/.../048_hammer/google_16k/textured.obj       Hammer"
-  # ...按 INDEX.md 的 take 表补全
-)
-read OBJ TAKE DATA MESH FBX <<< "${TAKES[$SLURM_ARRAY_TASK_ID]}"
-OUT=~/hoi_out/${OBJ}_$(basename $DATA)
-mkdir -p $OUT
-
-python scripts/extract_object_pose.py        $DATA/$FBX.fbx    $OUT/${OBJ}_pose.csv
-python scripts/extract_person_hand_joints.py $DATA/person1.fbx $OUT/person1_hand_joints.csv
-python scripts/extract_person_hand_joints.py $DATA/person2.fbx $OUT/person2_hand_joints.csv
-python scripts/compute_hand_object_distances.py --object $OBJ --take "$TAKE" \
-    --mesh $MESH --object-pose $OUT/${OBJ}_pose.csv \
-    --hands $OUT/person*.csv --out-dir $OUT
-python scripts/plot_hoi_results.py --out-dir $OUT --mesh $MESH \
-    --object $OBJ --take "$TAKE" --object-pose-name ${OBJ}_pose.csv
+NAMES=(drill_shot005 drill_shot007 crate_shot012 hammer_0728shot007 spray_0728shot020)
+python scripts/run_take.py --config takes.yaml --take ${NAMES[$SLURM_ARRAY_TASK_ID]}
 ```
 
-坑位提醒:
-- **take_key 必须和 `mesh_offsets.json` 里的完全一致**(如 `shot_005/Drill.skel`);
-  新 take 要先在本地跑 `fit_captury_motive_alignment.py` 把该 take 的 `.skel` 加进去、
-  重新生成 mesh_offsets.json 再上传——那一步依赖本地 `.motive` 文件,别在 HPC 上折腾
-- person 命名不统一(有的 take 是 p1/p2),按实际文件名改
-- ufbx 是纯 pip 包,无系统依赖;rtree 需要 libspatialindex,pip 的 wheel 通常自带,
-  装不上就 `conda install rtree` 或找管理员
+`torch` 只用 CPU(问题规模小,GPU 没有收益),所以不用申请 GPU 节点。
+
+## 坑位
+
+- **`take_key` 必须和 `mesh_offsets.json` 里的完全一致**,别改成 HPC 路径
+- **新 take 要先在本地做标定**:把该 take 的 `.skel` 加进 `fit_captury_motive_alignment.py`
+  的 `SKEL_FILES`,重跑它和 `build_mesh_offsets.py`,再把新的 mesh_offsets.json 传上去。
+  那一步依赖本地的 `.motive` 文件,别在 HPC 上折腾
+- person 命名不统一(有的 take 是 `p1`/`p2`,新的一批是 `person`/`person2`/`person3`),
+  按实际文件名填 `persons`
+- `rtree` 需要 libspatialindex,pip 的 wheel 一般自带;装不上就 `conda install rtree`
+
+## 产出
+
+```
+outputs/takes/<take名>/
+├── distances.csv              逐帧逐关节 signed distance + contact 标签
+├── summary.json               contact 段落、穿透帧、异常帧、阈值敏感度
+├── fig1~3.png                 距离曲线 / contact 时间线 / 最近帧 3D 检查
+├── run.log
+└── refine_<person>/
+    ├── hand_params_orig.npz   原始骨架参数(每帧每关节 local quat)
+    ├── hand_params_refined.npz 优化后 + delta
+    ├── skeleton_meta.json     层级/骨长/FPS/权重/可信度统计/改动量
+    ├── replayer_<person>.json → Unity HandPoseReplayer.cs 用
+    └── refined_<person>.anim  → Unity AnimationClip
+```

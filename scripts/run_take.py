@@ -75,7 +75,7 @@ def run_take(name, cfg, defaults, stages, force):
                        "--object", obj, "--take", t["take_key"], "--mesh", t["mesh"],
                        "--object-pose", pose_csv, "--hands", *hand_csvs,
                        "--out-dir", out, "--threshold-mm", t.get("contact_thr_mm", 15.0)]
-                if t.get("sampled"):
+                if t.get("sampled") is not None:
                     cmd += ["--sampled", t["sampled"]]
                 sh(cmd, log)
                 sh([PY, ROOT/"scripts/plot_hoi_results.py", "--out-dir", out,

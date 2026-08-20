@@ -1,0 +1,36 @@
+{
+  "object": "table",
+  "mesh": "/Users/hxy/Desktop/YCB/table.obj",
+  "method": "auto: stable-pose enumeration + marker surface fit + support plane",
+  "pitch_yaw_roll_deg": [
+    0.3251384383421926,
+    14.94244303199296,
+    -87.61415299952492
+  ],
+  "offset_m": [
+    -0.4908204543557205,
+    -0.05484186979760343,
+    -0.16256131963223136
+  ],
+  "scale_factor": [
+    1.6,
+    1.6,
+    1.6
+  ],
+  "marker_residual_mm": [
+    -10.172799435639353,
+    -4.468912868255692,
+    14.03426469864387,
+    0.250700480736752,
+    2.297654207816666
+  ],
+  "mean_abs_residual_mm": 6.244866338218467,
+  "stable_pose_index": 1,
+  "stable_pose_prob": 0.1664745036972315,
+  "margin_over_runner_up": 1.7114228598852008,
+  "symmetric": "none",
+  "still_run": [
+    0,
+    1107
+  ]
+}

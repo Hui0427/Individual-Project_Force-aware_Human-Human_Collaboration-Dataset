@@ -1,0 +1,37 @@
+{
+  "object": "crate",
+  "mesh": "/Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj",
+  "method": "auto: stable-pose enumeration + marker surface fit + support plane",
+  "pitch_yaw_roll_deg": [
+    -89.21238195640959,
+    1.1694005007314126,
+    66.5768100829815
+  ],
+  "offset_m": [
+    0.18401598299683586,
+    -0.015507449098983501,
+    0.03605980572701389
+  ],
+  "scale_factor": [
+    0.8,
+    0.8,
+    0.8
+  ],
+  "marker_residual_mm": [
+    1.4702817497463383,
+    8.815269500208206,
+    4.187510385283156,
+    -15.655580793035902,
+    -2.604850306182554,
+    4.594996054674376
+  ],
+  "mean_abs_residual_mm": 6.221414798188422,
+  "stable_pose_index": 2,
+  "stable_pose_prob": 0.1786721515824774,
+  "margin_over_runner_up": 3.058564212845175,
+  "symmetric": "none",
+  "still_run": [
+    0,
+    343
+  ]
+}

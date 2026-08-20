@@ -1,0 +1,35 @@
+{
+  "object": "hammer",
+  "mesh": "/Users/hxy/Desktop/YCB/048_hammer/google_16k/textured.obj",
+  "method": "auto: stable-pose enumeration + marker surface fit + support plane",
+  "pitch_yaw_roll_deg": [
+    -89.778298880683,
+    0.4645915685822976,
+    56.21719289719723
+  ],
+  "offset_m": [
+    0.031881784529031024,
+    -0.0005515395283156034,
+    -0.02103890842467072
+  ],
+  "scale_factor": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "marker_residual_mm": [
+    1.6347388614535945,
+    0.7548851706136693,
+    2.685176688544788,
+    0.47096645996517333
+  ],
+  "mean_abs_residual_mm": 1.3864417951443062,
+  "stable_pose_index": 1,
+  "stable_pose_prob": 0.4318830248453036,
+  "margin_over_runner_up": 2.400326043263787,
+  "symmetric": "none",
+  "still_run": [
+    687,
+    757
+  ]
+}

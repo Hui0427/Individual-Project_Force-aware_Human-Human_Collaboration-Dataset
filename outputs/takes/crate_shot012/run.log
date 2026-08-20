@@ -1,0 +1,664 @@
+
+======================================================================
+crate_shot012  Wed Aug 19 13:43:35 2026
+======================================================================
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/extract_object_pose.py /Users/hxy/Desktop/YCB/new_data_0716/shot_012/Crate.fbx /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv
+node=Crate:Hips  anim 0.0000..16.1333s  fps=60.0
+Wrote 969 frames to /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/extract_person_hand_joints.py /Users/hxy/Desktop/YCB/new_data_0716/shot_012/person1.fbx /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person1_hand_joints.csv
+[stage] loading scene...
+[stage] scene loaded, node count: 80
+[stage] parent index table built
+[stage] anim range: 0.0 16.133332993188134
+[stage] prefix inferred: person1:
+[stage] num_frames: 969 joints found: 42
+[stage] entering main loop
+frame 0/969
+frame 50/969
+frame 100/969
+frame 150/969
+frame 200/969
+frame 250/969
+frame 300/969
+frame 350/969
+frame 400/969
+frame 450/969
+frame 500/969
+frame 550/969
+frame 600/969
+frame 650/969
+frame 700/969
+frame 750/969
+frame 800/969
+frame 850/969
+frame 900/969
+frame 950/969
+Wrote 969 frames x 42 joints to /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person1_hand_joints.csv
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/extract_local_rotations.py /Users/hxy/Desktop/YCB/new_data_0716/shot_012/person1.fbx /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person1_locals.npz
+frame 0/969
+frame 200/969
+frame 400/969
+frame 600/969
+frame 800/969
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/extract_person_hand_joints.py /Users/hxy/Desktop/YCB/new_data_0716/shot_012/person2.fbx /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person2_hand_joints.csv
+[stage] loading scene...
+[stage] scene loaded, node count: 80
+[stage] parent index table built
+[stage] anim range: 0.0 16.133331994035963
+[stage] prefix inferred: person2:
+[stage] num_frames: 969 joints found: 42
+[stage] entering main loop
+frame 0/969
+frame 50/969
+frame 100/969
+frame 150/969
+frame 200/969
+frame 250/969
+frame 300/969
+frame 350/969
+frame 400/969
+frame 450/969
+frame 500/969
+frame 550/969
+frame 600/969
+frame 650/969
+frame 700/969
+frame 750/969
+frame 800/969
+frame 850/969
+frame 900/969
+frame 950/969
+Wrote 969 frames x 42 joints to /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person2_hand_joints.csv
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/extract_local_rotations.py /Users/hxy/Desktop/YCB/new_data_0716/shot_012/person2.fbx /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person2_locals.npz
+frame 0/969
+frame 200/969
+frame 400/969
+frame 600/969
+frame 800/969
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/compute_hand_object_distances.py --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --hands /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person1_hand_joints.csv /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person2_hand_joints.csv --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012 --threshold-mm 15.0
+
+======================================================================
+crate_shot012  Wed Aug 19 14:08:26 2026
+======================================================================
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/compute_hand_object_distances.py --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --hands /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person1_hand_joints.csv /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person2_hand_joints.csv --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012 --threshold-mm 15.0
+mesh has 1,970,460 faces -> sampled mode (auto)
+mesh: 1970460 faces, aligned into crate Hips frame (take shot_012/Crate.skel, scale [0.8, 0.8, 0.8]), distance mode: sampled KD-tree (500000 pts)
+person1: 969 frames x 42 joints | min signed -42.2 mm | contact frames @15mm: 475 | penetration(<-5mm) frames: 470
+person2: 969 frames x 42 joints | min signed -55.8 mm | contact frames @15mm: 487 | penetration(<-5mm) frames: 481
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv and summary.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/plot_hoi_results.py --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012 --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object crate --take shot_012/Crate.skel --object-pose-name crate_pose.csv
+fig1_distance_curves.png
+fig2_contact_timeline.png
+fig3_closest_frame_3d.png  (person2 frame 512, -55.8 mm)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person1_locals.npz --person person1 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:386: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 474/31008 (1.5%), 平均可信度 0.979
+  RightHandMiddle3                   7.3% 帧可信度低
+  RightHandRing3                     7.1% 帧可信度低
+  LeftHandRing3                      7.0% 帧可信度低
+  LeftHandThumb2                     5.8% 帧可信度低
+  LeftHandThumb1                     5.0% 帧可信度低
+  涉及 263 帧,最差帧 859
+deviation weighting: adaptive (segment mean 0.979, min 0.185)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 500 frames (fully open 477) | physics active on 498/969 frames
+contact targets in segment: 2756 (frame,finger) pairs
+  it=0  loss=2.297e+00  contact=4.831e-06  pen=1.124e-04  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=5.678e-01  contact=2.274e-06  pen=2.608e-05  dev=3.371e-03  temp=1.986e-04  lim=1.619e-03
+  it=100  loss=4.045e-01  contact=1.924e-06  pen=1.827e-05  dev=4.749e-03  temp=2.434e-04  lim=1.019e-03
+  it=150  loss=3.509e-01  contact=1.916e-06  pen=1.558e-05  dev=5.669e-03  temp=2.791e-04  lim=8.901e-04
+  it=200  loss=3.225e-01  contact=1.909e-06  pen=1.412e-05  dev=6.417e-03  temp=3.107e-04  lim=8.266e-04
+  it=250  loss=3.034e-01  contact=1.892e-06  pen=1.315e-05  dev=7.151e-03  temp=3.284e-04  lim=7.784e-04
+  it=300  loss=2.921e-01  contact=1.869e-06  pen=1.258e-05  dev=7.690e-03  temp=3.396e-04  lim=7.437e-04
+  it=350  loss=2.834e-01  contact=1.859e-06  pen=1.214e-05  dev=8.059e-03  temp=3.468e-04  lim=7.091e-04
+  it=399  loss=2.749e-01  contact=1.875e-06  pen=1.169e-05  dev=8.356e-03  temp=3.530e-04  lim=6.926e-04
+before: contact 段 capsule 距离  -23.08 mm | 最深穿透  -50.19 mm | 穿透样本占比 24.3%
+after : contact 段 capsule 距离   -4.31 mm | 最深穿透  -21.67 mm | 穿透样本占比 15.7%
+平均改动 4.22°, 最大 73.98°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person2_locals.npz --person person2 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:386: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 644/31008 (2.1%), 平均可信度 0.977
+  RightHandMiddle3                   6.9% 帧可信度低
+  LeftHandIndex3                     6.2% 帧可信度低
+  LeftHandMiddle3                    6.0% 帧可信度低
+  RightHandRing3                     5.3% 帧可信度低
+  LeftHandRing1                      5.1% 帧可信度低
+  涉及 130 帧,最差帧 851
+deviation weighting: adaptive (segment mean 0.977, min 0.168)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 501 frames (fully open 488) | physics active on 499/969 frames
+contact targets in segment: 3776 (frame,finger) pairs
+  it=0  loss=4.297e+00  contact=3.702e-05  pen=1.963e-04  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=6.824e-01  contact=7.031e-07  pen=3.341e-05  dev=3.436e-03  temp=1.277e-04  lim=1.214e-04
+  it=100  loss=5.622e-01  contact=6.799e-07  pen=2.733e-05  dev=4.056e-03  temp=1.795e-04  lim=1.131e-04
+  it=150  loss=4.981e-01  contact=6.512e-07  pen=2.407e-05  dev=4.809e-03  temp=2.205e-04  lim=9.613e-05
+  it=200  loss=4.639e-01  contact=6.102e-07  pen=2.229e-05  dev=5.544e-03  temp=2.682e-04  lim=1.005e-04
+  it=250  loss=4.424e-01  contact=5.787e-07  pen=2.117e-05  dev=6.309e-03  temp=3.029e-04  lim=8.886e-05
+  it=300  loss=4.257e-01  contact=5.575e-07  pen=2.029e-05  dev=6.967e-03  temp=3.224e-04  lim=8.718e-05
+  it=350  loss=4.118e-01  contact=5.551e-07  pen=1.955e-05  dev=7.623e-03  temp=3.444e-04  lim=8.108e-05
+  it=399  loss=3.987e-01  contact=6.149e-07  pen=1.882e-05  dev=8.161e-03  temp=3.579e-04  lim=7.963e-05
+before: contact 段 capsule 距离  -16.54 mm | 最深穿透  -63.00 mm | 穿透样本占比 24.5%
+after : contact 段 capsule 距离   -1.39 mm | 最深穿透  -25.36 mm | 穿透样本占比 23.4%
+平均改动 4.69°, 最大 49.31°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json: 969 frames x 70 bones (diff bones: 32)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim --clip-name refined_person1_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json: 969 frames x 70 bones (diff bones: 32)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim --clip-name refined_person2_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)
+
+======================================================================
+crate_shot012  Wed Aug 19 15:16:17 2026
+======================================================================
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person1_locals.npz --person person1 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:392: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 474/31008 (1.5%), 平均可信度 0.979
+  RightHandMiddle3                   7.3% 帧可信度低
+  RightHandRing3                     7.1% 帧可信度低
+  LeftHandRing3                      7.0% 帧可信度低
+  LeftHandThumb2                     5.8% 帧可信度低
+  LeftHandThumb1                     5.0% 帧可信度低
+  涉及 263 帧,最差帧 859
+deviation weighting: adaptive (segment mean 0.979, min 0.185)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 500 frames (fully open 477) | physics active on 498/969 frames
+contact targets in segment: 2756 (frame,finger) pairs
+  it=0  loss=2.297e+00  contact=4.831e-06  pen=1.124e-04  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=6.615e-01  contact=3.051e-06  pen=2.910e-05  dev=1.720e-03  temp=1.460e-06  lim=1.810e-03
+  it=100  loss=4.820e-01  contact=2.958e-06  pen=2.020e-05  dev=2.185e-03  temp=1.747e-06  lim=1.121e-03
+  it=150  loss=4.189e-01  contact=3.129e-06  pen=1.697e-05  dev=2.490e-03  temp=1.840e-06  lim=8.804e-04
+  it=200  loss=3.823e-01  contact=3.047e-06  pen=1.514e-05  dev=2.693e-03  temp=1.910e-06  lim=8.152e-04
+  it=250  loss=3.517e-01  contact=3.028e-06  pen=1.371e-05  dev=2.867e-03  temp=1.860e-06  lim=7.168e-04
+  it=300  loss=3.243e-01  contact=2.994e-06  pen=1.251e-05  dev=3.004e-03  temp=1.757e-06  lim=6.050e-04
+  it=350  loss=3.015e-01  contact=3.020e-06  pen=1.151e-05  dev=3.156e-03  temp=1.655e-06  lim=4.896e-04
+  it=399  loss=2.877e-01  contact=3.157e-06  pen=1.076e-05  dev=3.350e-03  temp=1.666e-06  lim=4.328e-04
+before: contact 段 capsule 距离  -23.08 mm | 最深穿透  -50.19 mm | 穿透样本占比 24.3%
+after : contact 段 capsule 距离   -4.34 mm | 最深穿透  -36.97 mm | 穿透样本占比 15.7%
+平均改动 2.96°, 最大 39.44°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person2_locals.npz --person person2 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:392: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 644/31008 (2.1%), 平均可信度 0.977
+  RightHandMiddle3                   6.9% 帧可信度低
+  LeftHandIndex3                     6.2% 帧可信度低
+  LeftHandMiddle3                    6.0% 帧可信度低
+  RightHandRing3                     5.3% 帧可信度低
+  LeftHandRing1                      5.1% 帧可信度低
+  涉及 130 帧,最差帧 851
+deviation weighting: adaptive (segment mean 0.977, min 0.168)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 501 frames (fully open 488) | physics active on 499/969 frames
+contact targets in segment: 3776 (frame,finger) pairs
+  it=0  loss=4.297e+00  contact=3.702e-05  pen=1.963e-04  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=7.364e-01  contact=1.390e-06  pen=3.491e-05  dev=2.423e-03  temp=1.059e-06  lim=7.448e-05
+  it=100  loss=6.147e-01  contact=1.641e-06  pen=2.868e-05  dev=2.604e-03  temp=1.038e-06  lim=1.241e-04
+  it=150  loss=5.408e-01  contact=1.836e-06  pen=2.484e-05  dev=2.847e-03  temp=1.076e-06  lim=1.176e-04
+  it=200  loss=5.005e-01  contact=1.911e-06  pen=2.268e-05  dev=3.117e-03  temp=1.165e-06  lim=1.323e-04
+  it=250  loss=4.599e-01  contact=1.942e-06  pen=2.053e-05  dev=3.605e-03  temp=1.253e-06  lim=1.238e-04
+  it=300  loss=4.087e-01  contact=1.975e-06  pen=1.800e-05  dev=4.306e-03  temp=1.178e-06  lim=1.047e-04
+  it=350  loss=3.616e-01  contact=2.096e-06  pen=1.559e-05  dev=5.092e-03  temp=1.124e-06  lim=1.173e-04
+  it=399  loss=3.264e-01  contact=2.198e-06  pen=1.367e-05  dev=5.924e-03  temp=1.193e-06  lim=1.287e-04
+before: contact 段 capsule 距离  -16.54 mm | 最深穿透  -63.00 mm | 穿透样本占比 24.5%
+after : contact 段 capsule 距离   -1.09 mm | 最深穿透  -25.17 mm | 穿透样本占比 22.7%
+平均改动 3.54°, 最大 48.13°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json: 969 frames x 70 bones (diff bones: 26)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim --clip-name refined_person1_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json: 969 frames x 70 bones (diff bones: 32)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim --clip-name refined_person2_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)
+
+======================================================================
+crate_shot012  Wed Aug 19 15:28:46 2026
+======================================================================
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person1_locals.npz --person person1 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:404: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 474/31008 (1.5%), 平均可信度 0.979
+  RightHandMiddle3                   7.3% 帧可信度低
+  RightHandRing3                     7.1% 帧可信度低
+  LeftHandRing3                      7.0% 帧可信度低
+  LeftHandThumb2                     5.8% 帧可信度低
+  LeftHandThumb1                     5.0% 帧可信度低
+  涉及 263 帧,最差帧 859
+deviation weighting: adaptive (segment mean 0.979, min 0.185)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 500 frames (fully open 477) | physics active on 498/969 frames
+contact targets in segment: 2756 (frame,finger) pairs
+  it=0  loss=2.092e+00  contact=4.831e-06  pen=1.022e-04  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=7.332e-01  contact=2.929e-06  pen=3.304e-05  dev=1.397e-03  temp=1.304e-06  lim=1.572e-03
+  it=100  loss=5.269e-01  contact=2.979e-06  pen=2.266e-05  dev=1.867e-03  temp=1.453e-06  lim=1.307e-03
+  it=150  loss=4.388e-01  contact=3.148e-06  pen=1.825e-05  dev=2.230e-03  temp=1.572e-06  lim=8.751e-04
+  it=200  loss=3.891e-01  contact=3.201e-06  pen=1.572e-05  dev=2.553e-03  temp=1.624e-06  lim=7.666e-04
+  it=250  loss=3.515e-01  contact=3.185e-06  pen=1.394e-05  dev=2.827e-03  temp=1.553e-06  lim=6.901e-04
+  it=300  loss=3.212e-01  contact=3.180e-06  pen=1.257e-05  dev=3.038e-03  temp=1.462e-06  lim=5.718e-04
+  it=350  loss=2.968e-01  contact=3.202e-06  pen=1.146e-05  dev=3.261e-03  temp=1.374e-06  lim=4.743e-04
+  it=399  loss=2.820e-01  contact=3.330e-06  pen=1.067e-05  dev=3.505e-03  temp=1.381e-06  lim=4.246e-04
+before: contact 段 capsule 距离  -23.08 mm | 最深穿透  -50.19 mm | 穿透样本占比 24.3%
+after : contact 段 capsule 距离   -4.35 mm | 最深穿透  -32.76 mm | 穿透样本占比 15.3%
+平均改动 2.99°, 最大 40.03°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person2_locals.npz --person person2 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:404: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 644/31008 (2.1%), 平均可信度 0.977
+  RightHandMiddle3                   6.9% 帧可信度低
+  LeftHandIndex3                     6.2% 帧可信度低
+  LeftHandMiddle3                    6.0% 帧可信度低
+  RightHandRing3                     5.3% 帧可信度低
+  LeftHandRing1                      5.1% 帧可信度低
+  涉及 130 帧,最差帧 851
+deviation weighting: adaptive (segment mean 0.977, min 0.168)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 501 frames (fully open 488) | physics active on 499/969 frames
+contact targets in segment: 3776 (frame,finger) pairs
+  it=0  loss=3.354e+00  contact=3.702e-05  pen=1.492e-04  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=7.707e-01  contact=1.275e-06  pen=3.670e-05  dev=1.506e-03  temp=1.112e-06  lim=2.716e-05
+  it=100  loss=6.043e-01  contact=1.573e-06  pen=2.824e-05  dev=2.060e-03  temp=1.047e-06  lim=6.971e-05
+  it=150  loss=5.157e-01  contact=1.815e-06  pen=2.363e-05  dev=2.653e-03  temp=1.073e-06  lim=7.741e-05
+  it=200  loss=4.661e-01  contact=2.044e-06  pen=2.091e-05  dev=3.233e-03  temp=1.164e-06  lim=1.028e-04
+  it=250  loss=4.284e-01  contact=2.055e-06  pen=1.896e-05  dev=3.780e-03  temp=1.185e-06  lim=1.084e-04
+  it=300  loss=3.924e-01  contact=2.068e-06  pen=1.716e-05  dev=4.494e-03  temp=1.147e-06  lim=1.028e-04
+  it=350  loss=3.529e-01  contact=2.045e-06  pen=1.517e-05  dev=5.359e-03  temp=1.133e-06  lim=1.068e-04
+  it=399  loss=3.130e-01  contact=2.201e-06  pen=1.304e-05  dev=6.368e-03  temp=1.137e-06  lim=1.130e-04
+before: contact 段 capsule 距离  -16.54 mm | 最深穿透  -63.00 mm | 穿透样本占比 24.5%
+after : contact 段 capsule 距离   -1.01 mm | 最深穿透  -25.96 mm | 穿透样本占比 22.5%
+平均改动 3.71°, 最大 50.33°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json: 969 frames x 70 bones (diff bones: 23)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim --clip-name refined_person1_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json: 969 frames x 70 bones (diff bones: 32)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim --clip-name refined_person2_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)
+
+======================================================================
+crate_shot012  Wed Aug 19 15:32:18 2026
+======================================================================
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person1_locals.npz --person person1 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:419: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 474/31008 (1.5%), 平均可信度 0.979
+  RightHandMiddle3                   7.3% 帧可信度低
+  RightHandRing3                     7.1% 帧可信度低
+  LeftHandRing3                      7.0% 帧可信度低
+  LeftHandThumb2                     5.8% 帧可信度低
+  LeftHandThumb1                     5.0% 帧可信度低
+  涉及 263 帧,最差帧 859
+deviation weighting: adaptive (segment mean 0.979, min 0.185)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 500 frames (fully open 477) | physics active on 498/969 frames
+cavity mask: 7.5% of capsule samples start deeper than -25 mm and are excluded from the physical terms
+contact targets in segment: 2756 (frame,finger) pairs
+  it=0  loss=8.494e-01  contact=4.831e-06  pen=4.006e-05  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=3.864e-01  contact=1.842e-06  pen=1.754e-05  dev=5.869e-04  temp=7.571e-07  lim=1.459e-04
+  it=100  loss=2.837e-01  contact=1.897e-06  pen=1.220e-05  dev=9.787e-04  temp=8.920e-07  lim=1.813e-04
+  it=150  loss=2.358e-01  contact=1.918e-06  pen=9.807e-06  dev=1.223e-03  temp=8.866e-07  lim=1.573e-04
+  it=200  loss=2.118e-01  contact=1.940e-06  pen=8.585e-06  dev=1.407e-03  temp=9.065e-07  lim=1.169e-04
+  it=250  loss=1.943e-01  contact=1.965e-06  pen=7.726e-06  dev=1.568e-03  temp=8.811e-07  lim=9.176e-05
+  it=300  loss=1.830e-01  contact=1.999e-06  pen=7.172e-06  dev=1.706e-03  temp=8.492e-07  lim=9.219e-05
+  it=350  loss=1.746e-01  contact=2.048e-06  pen=6.794e-06  dev=1.831e-03  temp=7.790e-07  lim=8.663e-05
+  it=399  loss=1.679e-01  contact=2.099e-06  pen=6.453e-06  dev=1.959e-03  temp=7.519e-07  lim=8.229e-05
+before: contact 段 capsule 距离  -23.08 mm | 最深穿透  -50.19 mm | 穿透样本占比 24.3%
+after : contact 段 capsule 距离   -8.12 mm | 最深穿透  -40.54 mm | 穿透样本占比 18.1%
+平均改动 1.99°, 最大 34.77°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person2_locals.npz --person person2 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:419: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 644/31008 (2.1%), 平均可信度 0.977
+  RightHandMiddle3                   6.9% 帧可信度低
+  LeftHandIndex3                     6.2% 帧可信度低
+  LeftHandMiddle3                    6.0% 帧可信度低
+  RightHandRing3                     5.3% 帧可信度低
+  LeftHandRing1                      5.1% 帧可信度低
+  涉及 130 帧,最差帧 851
+deviation weighting: adaptive (segment mean 0.977, min 0.168)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 501 frames (fully open 488) | physics active on 499/969 frames
+cavity mask: 14.5% of capsule samples start deeper than -25 mm and are excluded from the physical terms
+contact targets in segment: 3776 (frame,finger) pairs
+  it=0  loss=8.902e-01  contact=3.702e-05  pen=2.600e-05  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=2.341e-01  contact=1.242e-06  pen=1.050e-05  dev=6.965e-04  temp=5.475e-07  lim=5.633e-06
+  it=100  loss=2.147e-01  contact=1.444e-06  pen=9.448e-06  dev=7.158e-04  temp=5.297e-07  lim=4.758e-07
+  it=150  loss=2.076e-01  contact=1.431e-06  pen=9.023e-06  dev=7.474e-04  temp=6.054e-07  lim=8.975e-07
+  it=200  loss=2.040e-01  contact=1.428e-06  pen=8.754e-06  dev=7.855e-04  temp=6.921e-07  lim=2.123e-06
+  it=250  loss=2.006e-01  contact=1.374e-06  pen=8.622e-06  dev=8.344e-04  temp=6.795e-07  lim=2.466e-06
+  it=300  loss=1.960e-01  contact=1.370e-06  pen=8.463e-06  dev=8.944e-04  temp=6.055e-07  lim=3.116e-06
+  it=350  loss=1.935e-01  contact=1.348e-06  pen=8.366e-06  dev=9.467e-04  temp=5.850e-07  lim=3.770e-06
+  it=399  loss=1.911e-01  contact=1.374e-06  pen=8.203e-06  dev=1.005e-03  temp=6.114e-07  lim=3.795e-06
+before: contact 段 capsule 距离  -16.54 mm | 最深穿透  -63.00 mm | 穿透样本占比 24.5%
+after : contact 段 capsule 距离   -6.96 mm | 最深穿透  -51.18 mm | 穿透样本占比 25.9%
+平均改动 1.75°, 最大 17.96°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json: 969 frames x 70 bones (diff bones: 23)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim --clip-name refined_person1_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json: 969 frames x 70 bones (diff bones: 32)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim --clip-name refined_person2_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)
+
+======================================================================
+crate_shot012  Wed Aug 19 15:34:23 2026
+======================================================================
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person1_locals.npz --person person1 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:434: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 474/31008 (1.5%), 平均可信度 0.979
+  RightHandMiddle3                   7.3% 帧可信度低
+  RightHandRing3                     7.1% 帧可信度低
+  LeftHandRing3                      7.0% 帧可信度低
+  LeftHandThumb2                     5.8% 帧可信度低
+  LeftHandThumb1                     5.0% 帧可信度低
+  涉及 263 帧,最差帧 859
+deviation weighting: adaptive (segment mean 0.979, min 0.185)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 500 frames (fully open 477) | physics active on 498/969 frames
+cavity mask: 7.5% of samples start deeper than -25 mm -> 23.1% of samples muted after expanding to whole fingers
+contact targets in segment: 2756 (frame,finger) pairs
+  it=0  loss=1.624e-01  contact=4.784e-06  pen=5.725e-06  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=7.977e-02  contact=1.789e-06  pen=2.731e-06  dev=8.071e-05  temp=3.587e-07  lim=2.367e-08
+  it=100  loss=7.035e-02  contact=1.662e-06  pen=2.259e-06  dev=1.594e-04  temp=4.186e-07  lim=5.534e-07
+  it=150  loss=6.480e-02  contact=1.619e-06  pen=1.968e-06  dev=2.517e-04  temp=4.493e-07  lim=1.013e-06
+  it=200  loss=6.276e-02  contact=1.594e-06  pen=1.813e-06  dev=3.390e-04  temp=5.090e-07  lim=4.346e-06
+  it=250  loss=6.000e-02  contact=1.589e-06  pen=1.730e-06  dev=3.981e-04  temp=4.532e-07  lim=3.790e-06
+  it=300  loss=5.836e-02  contact=1.580e-06  pen=1.676e-06  dev=4.479e-04  temp=4.274e-07  lim=4.172e-06
+  it=350  loss=5.666e-02  contact=1.560e-06  pen=1.645e-06  dev=4.930e-04  temp=3.814e-07  lim=3.918e-06
+  it=399  loss=5.598e-02  contact=1.548e-06  pen=1.622e-06  dev=5.312e-04  temp=3.740e-07  lim=3.999e-06
+before: contact 段 capsule 距离  -23.08 mm | 最深穿透  -50.19 mm | 穿透样本占比 24.3%
+after : contact 段 capsule 距离  -15.67 mm | 最深穿透  -59.08 mm | 穿透样本占比 20.3%
+平均改动 1.05°, 最大 15.15°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person2_locals.npz --person person2 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:434: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 644/31008 (2.1%), 平均可信度 0.977
+  RightHandMiddle3                   6.9% 帧可信度低
+  LeftHandIndex3                     6.2% 帧可信度低
+  LeftHandMiddle3                    6.0% 帧可信度低
+  RightHandRing3                     5.3% 帧可信度低
+  LeftHandRing1                      5.1% 帧可信度低
+  涉及 130 帧,最差帧 851
+deviation weighting: adaptive (segment mean 0.977, min 0.168)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 501 frames (fully open 488) | physics active on 499/969 frames
+cavity mask: 14.5% of samples start deeper than -25 mm -> 19.1% of samples muted after expanding to whole fingers
+contact targets in segment: 3776 (frame,finger) pairs
+  it=0  loss=4.679e-01  contact=3.702e-05  pen=4.885e-06  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=7.257e-02  contact=1.245e-06  pen=2.542e-06  dev=4.425e-04  temp=4.426e-07  lim=0.000e+00
+  it=100  loss=6.411e-02  contact=1.402e-06  pen=2.045e-06  dev=4.253e-04  temp=4.385e-07  lim=0.000e+00
+  it=150  loss=6.124e-02  contact=1.375e-06  pen=1.850e-06  dev=4.283e-04  temp=5.028e-07  lim=0.000e+00
+  it=200  loss=5.983e-02  contact=1.345e-06  pen=1.747e-06  dev=4.340e-04  temp=5.509e-07  lim=0.000e+00
+  it=250  loss=5.758e-02  contact=1.291e-06  pen=1.679e-06  dev=4.540e-04  temp=5.324e-07  lim=0.000e+00
+  it=300  loss=5.435e-02  contact=1.284e-06  pen=1.611e-06  dev=4.773e-04  temp=4.410e-07  lim=0.000e+00
+  it=350  loss=5.312e-02  contact=1.244e-06  pen=1.592e-06  dev=5.014e-04  temp=4.170e-07  lim=0.000e+00
+  it=399  loss=5.182e-02  contact=1.257e-06  pen=1.494e-06  dev=5.288e-04  temp=4.422e-07  lim=0.000e+00
+before: contact 段 capsule 距离  -16.54 mm | 最深穿透  -63.00 mm | 穿透样本占比 24.5%
+after : contact 段 capsule 距离  -16.05 mm | 最深穿透  -60.92 mm | 穿透样本占比 26.4%
+平均改动 1.33°, 最大 10.97°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json: 969 frames x 70 bones (diff bones: 23)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim --clip-name refined_person1_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json: 969 frames x 70 bones (diff bones: 32)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim --clip-name refined_person2_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)
+
+======================================================================
+crate_shot012  Wed Aug 19 15:37:00 2026
+======================================================================
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person1_locals.npz --person person1 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:435: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 474/31008 (1.5%), 平均可信度 0.979
+  RightHandMiddle3                   7.3% 帧可信度低
+  RightHandRing3                     7.1% 帧可信度低
+  LeftHandRing3                      7.0% 帧可信度低
+  LeftHandThumb2                     5.8% 帧可信度低
+  LeftHandThumb1                     5.0% 帧可信度低
+  涉及 263 帧,最差帧 859
+deviation weighting: adaptive (segment mean 0.979, min 0.185)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 500 frames (fully open 477) | physics active on 498/969 frames
+cavity from occupancy: 30 voxels (2 cm, seen on >=20 frames) -> 12.1% of samples exempt from penetration
+contact targets in segment: 2756 (frame,finger) pairs
+  it=0  loss=4.871e-01  contact=4.831e-06  pen=2.194e-05  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=2.583e-01  contact=1.793e-06  pen=1.121e-05  dev=2.712e-04  temp=7.396e-07  lim=1.034e-04
+  it=100  loss=2.029e-01  contact=1.731e-06  pen=8.290e-06  dev=5.906e-04  temp=9.069e-07  lim=1.062e-04
+  it=150  loss=1.712e-01  contact=1.766e-06  pen=6.604e-06  dev=9.386e-04  temp=9.795e-07  lim=9.476e-05
+  it=200  loss=1.588e-01  contact=1.807e-06  pen=5.925e-06  dev=1.210e-03  temp=1.003e-06  lim=9.607e-05
+  it=250  loss=1.503e-01  contact=1.831e-06  pen=5.498e-06  dev=1.408e-03  temp=9.832e-07  lim=9.484e-05
+  it=300  loss=1.444e-01  contact=1.853e-06  pen=5.211e-06  dev=1.558e-03  temp=9.622e-07  lim=9.026e-05
+  it=350  loss=1.402e-01  contact=1.869e-06  pen=5.034e-06  dev=1.687e-03  temp=9.121e-07  lim=9.167e-05
+  it=399  loss=1.374e-01  contact=1.867e-06  pen=4.874e-06  dev=1.805e-03  temp=9.266e-07  lim=8.651e-05
+before: contact 段 capsule 距离  -23.08 mm | 最深穿透  -50.19 mm | 穿透样本占比 24.3%
+after : contact 段 capsule 距离  -10.73 mm | 最深穿透  -41.77 mm | 穿透样本占比 19.1%
+平均改动 1.95°, 最大 27.70°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person2_locals.npz --person person2 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:435: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 644/31008 (2.1%), 平均可信度 0.977
+  RightHandMiddle3                   6.9% 帧可信度低
+  LeftHandIndex3                     6.2% 帧可信度低
+  LeftHandMiddle3                    6.0% 帧可信度低
+  RightHandRing3                     5.3% 帧可信度低
+  LeftHandRing1                      5.1% 帧可信度低
+  涉及 130 帧,最差帧 851
+deviation weighting: adaptive (segment mean 0.977, min 0.168)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 501 frames (fully open 488) | physics active on 499/969 frames
+cavity from occupancy: 40 voxels (2 cm, seen on >=20 frames) -> 18.4% of samples exempt from penetration
+contact targets in segment: 3776 (frame,finger) pairs
+  it=0  loss=5.483e-01  contact=3.702e-05  pen=8.908e-06  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=9.605e-02  contact=1.233e-06  pen=3.550e-06  dev=5.824e-04  temp=6.070e-07  lim=7.508e-08
+  it=100  loss=7.939e-02  contact=1.410e-06  pen=2.660e-06  dev=6.743e-04  temp=5.702e-07  lim=1.540e-06
+  it=150  loss=7.235e-02  contact=1.381e-06  pen=2.310e-06  dev=7.512e-04  temp=5.783e-07  lim=1.985e-06
+  it=200  loss=6.997e-02  contact=1.358e-06  pen=2.124e-06  dev=8.029e-04  temp=6.548e-07  lim=2.398e-06
+  it=250  loss=6.737e-02  contact=1.302e-06  pen=2.051e-06  dev=8.509e-04  temp=6.232e-07  lim=2.264e-06
+  it=300  loss=6.386e-02  contact=1.304e-06  pen=1.965e-06  dev=8.984e-04  temp=5.306e-07  lim=2.115e-06
+  it=350  loss=6.252e-02  contact=1.266e-06  pen=1.938e-06  dev=9.406e-04  temp=5.069e-07  lim=2.050e-06
+  it=399  loss=6.110e-02  contact=1.278e-06  pen=1.844e-06  dev=9.836e-04  temp=5.221e-07  lim=2.138e-06
+before: contact 段 capsule 距离  -16.54 mm | 最深穿透  -63.00 mm | 穿透样本占比 24.5%
+after : contact 段 capsule 距离   -5.15 mm | 最深穿透  -30.19 mm | 穿透样本占比 24.5%
+平均改动 1.74°, 最大 16.67°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json: 969 frames x 70 bones (diff bones: 26)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim --clip-name refined_person1_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json: 969 frames x 70 bones (diff bones: 32)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim --clip-name refined_person2_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)
+
+======================================================================
+crate_shot012  Wed Aug 19 15:39:41 2026
+======================================================================
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person1_locals.npz --person person1 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:445: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 474/31008 (1.5%), 平均可信度 0.979
+  RightHandMiddle3                   7.3% 帧可信度低
+  RightHandRing3                     7.1% 帧可信度低
+  LeftHandRing3                      7.0% 帧可信度低
+  LeftHandThumb2                     5.8% 帧可信度低
+  LeftHandThumb1                     5.0% 帧可信度低
+  涉及 263 帧,最差帧 859
+deviation weighting: adaptive (segment mean 0.979, min 0.185)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 500 frames (fully open 477) | physics active on 498/969 frames
+cavity from occupancy: 30 voxels (2 cm, seen on >=20 frames) covering 12.1% of samples
+contact targets in segment: 2756 (frame,finger) pairs
+  it=0  loss=2.057e+00  contact=1.618e-04  pen=2.196e-05  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=5.746e-01  contact=7.477e-06  pen=2.244e-05  dev=1.766e-03  temp=1.733e-06  lim=1.461e-03
+  it=100  loss=4.480e-01  contact=3.782e-06  pen=1.799e-05  dev=2.156e-03  temp=1.865e-06  lim=1.088e-03
+  it=150  loss=3.988e-01  contact=3.456e-06  pen=1.577e-05  dev=2.445e-03  temp=1.910e-06  lim=8.245e-04
+  it=200  loss=3.728e-01  contact=3.332e-06  pen=1.455e-05  dev=2.597e-03  temp=1.963e-06  lim=6.627e-04
+  it=250  loss=3.479e-01  contact=3.332e-06  pen=1.343e-05  dev=2.730e-03  temp=1.897e-06  lim=5.415e-04
+  it=300  loss=3.245e-01  contact=3.354e-06  pen=1.238e-05  dev=2.891e-03  temp=1.796e-06  lim=4.575e-04
+  it=350  loss=3.022e-01  contact=3.302e-06  pen=1.139e-05  dev=3.093e-03  temp=1.714e-06  lim=3.972e-04
+  it=399  loss=2.866e-01  contact=3.295e-06  pen=1.067e-05  dev=3.302e-03  temp=1.667e-06  lim=3.593e-04
+before: contact 段 capsule 距离  -23.08 mm | 最深穿透  -50.19 mm | 穿透样本占比 24.3%
+after : contact 段 capsule 距离   -4.39 mm | 最深穿透  -35.82 mm | 穿透样本占比 16.1%
+平均改动 2.88°, 最大 37.55°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/person2_locals.npz --person person2 --object crate --take shot_012/Crate.skel --mesh /Users/hxy/Desktop/YCB/align_drill_YCB/Assets/create.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/crate_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:445: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..969 (969 frames)  [skeleton 969, object 969]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 644/31008 (2.1%), 平均可信度 0.977
+  RightHandMiddle3                   6.9% 帧可信度低
+  LeftHandIndex3                     6.2% 帧可信度低
+  LeftHandMiddle3                    6.0% 帧可信度低
+  RightHandRing3                     5.3% 帧可信度低
+  LeftHandRing1                      5.1% 帧可信度低
+  涉及 130 帧,最差帧 851
+deviation weighting: adaptive (segment mean 0.977, min 0.168)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 2% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 0.5 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 501 frames (fully open 488) | physics active on 499/969 frames
+cavity from occupancy: 40 voxels (2 cm, seen on >=20 frames) covering 18.4% of samples
+contact targets in segment: 3776 (frame,finger) pairs
+  it=0  loss=2.993e+00  contact=2.815e-04  pen=8.932e-06  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=7.088e-01  contact=1.466e-06  pen=3.350e-05  dev=2.419e-03  temp=1.041e-06  lim=8.246e-05
+  it=100  loss=6.258e-01  contact=1.694e-06  pen=2.918e-05  dev=2.617e-03  temp=1.097e-06  lim=7.484e-05
+  it=150  loss=5.523e-01  contact=1.828e-06  pen=2.541e-05  dev=2.777e-03  temp=1.104e-06  lim=1.007e-04
+  it=200  loss=5.094e-01  contact=1.944e-06  pen=2.314e-05  dev=2.964e-03  temp=1.156e-06  lim=1.141e-04
+  it=250  loss=4.708e-01  contact=1.945e-06  pen=2.115e-05  dev=3.333e-03  temp=1.196e-06  lim=1.175e-04
+  it=300  loss=4.274e-01  contact=1.988e-06  pen=1.896e-05  dev=3.900e-03  temp=1.168e-06  lim=1.111e-04
+  it=350  loss=3.842e-01  contact=2.030e-06  pen=1.676e-05  dev=4.600e-03  temp=1.154e-06  lim=9.709e-05
+  it=399  loss=3.462e-01  contact=2.210e-06  pen=1.475e-05  dev=5.357e-03  temp=1.135e-06  lim=1.110e-04
+before: contact 段 capsule 距离  -16.54 mm | 最深穿透  -63.00 mm | 穿透样本占比 24.5%
+after : contact 段 capsule 距离   -1.25 mm | 最深穿透  -25.64 mm | 穿透样本占比 23.1%
+平均改动 3.45°, 最大 45.53°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/replayer_person1.json: 969 frames x 70 bones (diff bones: 26)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim --clip-name refined_person1_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person1/refined_person1.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/replayer_person2.json: 969 frames x 70 bones (diff bones: 32)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim --clip-name refined_person2_crate_shot012
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/crate_shot012/refine_person2/refined_person2.anim  (969 frames, 80 nodes, fps 60, mirror=negate_x)

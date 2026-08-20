@@ -1,0 +1,35 @@
+{
+  "object": "spray",
+  "mesh": "/Users/hxy/Desktop/YCB/022_windex_bottle/google_16k/textured.obj",
+  "method": "auto: stable-pose enumeration + marker surface fit + support plane",
+  "pitch_yaw_roll_deg": [
+    -92.61687128288628,
+    86.70379670305934,
+    -46.37980639448655
+  ],
+  "offset_m": [
+    -0.044255809141535284,
+    0.008164235827414795,
+    -0.004415090860807819
+  ],
+  "scale_factor": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "marker_residual_mm": [
+    84.19384796192573,
+    4.301067420304108,
+    76.26335561443217,
+    3.0226172584385
+  ],
+  "mean_abs_residual_mm": 41.94522206377513,
+  "stable_pose_index": 4,
+  "stable_pose_prob": 0.11572969539487124,
+  "margin_over_runner_up": 1.051089589566644,
+  "symmetric": "none",
+  "still_run": [
+    0,
+    649
+  ]
+}

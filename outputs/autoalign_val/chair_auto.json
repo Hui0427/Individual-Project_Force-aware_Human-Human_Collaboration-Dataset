@@ -1,0 +1,36 @@
+{
+  "object": "chair",
+  "mesh": "/Users/hxy/Desktop/YCB/chair.obj",
+  "method": "auto: stable-pose enumeration + marker surface fit + support plane",
+  "pitch_yaw_roll_deg": [
+    -89.626141618209,
+    -3.9829690417964616,
+    131.03674539841046
+  ],
+  "offset_m": [
+    0.19893303412241506,
+    0.043610387978183666,
+    -0.13441019515955582
+  ],
+  "scale_factor": [
+    0.8,
+    0.8,
+    0.8
+  ],
+  "marker_residual_mm": [
+    -15.527847921336532,
+    130.94747594795135,
+    31.778165917463088,
+    44.82066870860967,
+    -4.310624988136394
+  ],
+  "mean_abs_residual_mm": 45.47695669669941,
+  "stable_pose_index": 3,
+  "stable_pose_prob": 0.17468660866757785,
+  "margin_over_runner_up": 1.1075321634609983,
+  "symmetric": "none",
+  "still_run": [
+    0,
+    649
+  ]
+}
