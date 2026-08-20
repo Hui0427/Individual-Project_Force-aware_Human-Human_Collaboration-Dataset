@@ -34,3 +34,6 @@ outputs/hand_refine_*_smooth/
 
 # 手套导出的 Unity JSON，可由 scripts/wuji/wuji_to_unity.py 重生成
 outputs/wuji/*.json
+
+# 论文初稿性质的方法/结果笔记，等论文提交后再决定是否公开
+PAPER_NOTES.md
