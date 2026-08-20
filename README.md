@@ -40,6 +40,8 @@ Distances are computed entirely in the Captury right-handed frame (metres).
 The `negate_x` step exists only for Unity display and does not affect any
 distance computation.
 
+![Processing pipeline](outputs/figures/fig_pipeline.png)
+
 ## Layout
 
 ```
@@ -66,10 +68,19 @@ scripts/
     cavity_from_occupancy.py        # infer free space inside closed meshes from hand occupancy
     export_unity_anim.py            # -> .anim for Unity
     export_replayer_json.py         # -> JSON for HandPoseReplayer.cs
+    plot_refinement_figures.py      # quantitative before/after paper figures
 
   wuji/
     wuji_read.py                    # glove .mcap -> npz (21 joints + 24x31 tactile frames)
     wuji_to_unity.py                # resample glove to the Captury frame grid -> Unity JSON
+
+  unity/
+    HandPoseReplayer.cs             # A/B playback of original and refined hand poses
+    WujiHandReplayer.cs             # retarget Wuji joints onto Captury finger bones
+    WujiHandOverlay.cs              # visualise and auto-align the 21 glove keypoints
+    ShowAnimatorFrame.cs            # lightweight Unity frame/debug readout
+
+  plot_pipeline_figure.py           # report-ready pipeline PNG and vector PDF
 
   debug/                            # one-off probes kept for provenance
 
@@ -81,7 +92,7 @@ outputs/
                                     #   refine_<person>/skeleton_meta.json
   autoalign_val/                    # evidence that auto_align_mesh.py fails
                                     #   (see Accuracy notes)
-  wuji/WujiHandOverlay.cs           # Unity overlay for the glove keypoints
+  figures/                          # paper figures and quantitative results table
 
 takes.yaml                          # one entry per take; also valid JSON, so pyyaml is optional
 HPC.md                              # running the pipeline on a SLURM cluster
