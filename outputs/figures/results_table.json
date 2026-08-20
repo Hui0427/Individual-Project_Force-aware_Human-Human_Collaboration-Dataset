@@ -1,0 +1,46 @@
+{
+  "crate_shot012/person1": {
+    "contact_before_mm": -16.899301093060703,
+    "contact_after_mm": -2.3764858042688117,
+    "deepest_before_mm": -50.208452179989436,
+    "deepest_after_mm": -35.92954566545756,
+    "penetrating_before_pct": 24.301112257768605,
+    "penetrating_after_pct": 16.017658525398463,
+    "jerk_ratio": 1.0219054480749288,
+    "mean_joint_change_deg": 2.8787615299224854,
+    "max_joint_change_deg": 37.55003356933594
+  },
+  "crate_shot012/person2": {
+    "contact_before_mm": -17.086741264837126,
+    "contact_after_mm": -3.07810134856524,
+    "deepest_before_mm": -62.95999952653059,
+    "deepest_after_mm": -25.662645759654414,
+    "penetrating_before_pct": 24.489164086687307,
+    "penetrating_after_pct": 23.132668271987157,
+    "jerk_ratio": 1.0114448367577726,
+    "mean_joint_change_deg": 3.445091962814331,
+    "max_joint_change_deg": 45.526363372802734
+  },
+  "drill_shot005/person1": {
+    "contact_before_mm": -3.3740819719503703,
+    "contact_after_mm": 0.6630786958273763,
+    "deepest_before_mm": -32.797604456520524,
+    "deepest_after_mm": -31.837145936274883,
+    "penetrating_before_pct": 25.769346582354714,
+    "penetrating_after_pct": 20.31416240088327,
+    "jerk_ratio": 1.0136654684186566,
+    "mean_joint_change_deg": 3.507432699203491,
+    "max_joint_change_deg": 39.69729995727539
+  },
+  "drill_shot005/person2": {
+    "contact_before_mm": -0.21793747709395656,
+    "contact_after_mm": 1.2563826369358724,
+    "deepest_before_mm": -26.438092600041387,
+    "deepest_after_mm": -25.2015358391892,
+    "penetrating_before_pct": 7.055103884372177,
+    "penetrating_after_pct": 6.923617384321991,
+    "jerk_ratio": 1.0236729780621778,
+    "mean_joint_change_deg": 1.2360299825668335,
+    "max_joint_change_deg": 20.527542114257812
+  }
+}

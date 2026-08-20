@@ -6,9 +6,8 @@
 // The Animator keeps driving the body and root motion; this script only overrides the
 // hand bones, so the character cannot drift or change position because of it.
 //
-// A/B compare: toggle "Play Refined" during playback. For a still comparison, tick
-// "Freeze" and scrub "Freeze Frame" to one of the high-difference frames listed in the
-// take's skeleton_meta.json.
+// A/B compare: toggle "Play Refined" during playback. For a still comparison tick
+// "Freeze" and scrub "Freeze Frame"; the whole character holds on that frame.
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,10 +23,10 @@ public class HandPoseReplayer : MonoBehaviour
     public bool playRefined = true;
 
     [Header("Freeze / scrub")]
-    [Tooltip("Hold the whole character on a single frame to compare poses side by side.")]
+    [Tooltip("Hold the whole character on Freeze Frame so poses can be compared as stills.")]
     public bool freeze = false;
     [Tooltip("Frame to hold. High-difference frames are listed in skeleton_meta.json.")]
-    [Range(0, 3000)] public int freezeFrame = 0;
+    public int freezeFrame = 0;
 
     [Header("Display")]
     public bool showOverlay = true;
@@ -60,6 +59,13 @@ public class HandPoseReplayer : MonoBehaviour
     float fallbackT0;
     int curFrame;
     int matched;
+
+    // Freeze bookkeeping: seek the Animator only when the target frame actually changes,
+    // otherwise the re-seek every LateUpdate fights anim.speed = 0 and nothing holds.
+    bool wasFrozen;
+    int seekedFrame = -1;
+    float savedSpeed = 1f;
+
     GUIStyle style;
 
     void Start()
@@ -84,6 +90,7 @@ public class HandPoseReplayer : MonoBehaviour
             else if (missing.Count < 5) missing.Add(data.names[n]);
 
         anim = GetComponent<Animator>();   // left enabled: it still drives body + root
+        if (anim != null) savedSpeed = anim.speed;
         fallbackT0 = Time.time;
 
         Debug.Log($"HandPoseReplayer: {matched}/{handIdx.Count} hand bones bound, " +
@@ -93,25 +100,40 @@ public class HandPoseReplayer : MonoBehaviour
                              string.Join(", ", missing) + "] - check the rig's naming.");
     }
 
+    void OnDisable()
+    {
+        if (anim != null) anim.speed = savedSpeed;   // never leave the Animator stopped
+    }
+
     void LateUpdate()
     {
         if (data == null) return;
         bool hasAnim = anim != null && anim.enabled && anim.runtimeAnimatorController != null;
+        freezeFrame = Mathf.Clamp(freezeFrame, 0, data.frames - 1);
 
         if (freeze)
         {
-            curFrame = Mathf.Clamp(freezeFrame, 0, data.frames - 1);
+            curFrame = freezeFrame;
             if (hasAnim)
             {
-                anim.speed = 0f;
-                var st0 = anim.GetCurrentAnimatorStateInfo(0);
-                if (st0.length > 0f)
-                    anim.Play(st0.fullPathHash, 0, (curFrame / data.fps) / st0.length);
+                if (!wasFrozen) { savedSpeed = anim.speed; anim.speed = 0f; seekedFrame = -1; }
+                if (seekedFrame != curFrame)
+                {
+                    var st = anim.GetCurrentAnimatorStateInfo(0);
+                    if (st.length > 0f)
+                    {
+                        anim.Play(st.fullPathHash, 0, (curFrame / data.fps) / st.length);
+                        anim.Update(0f);            // apply the seek immediately
+                    }
+                    seekedFrame = curFrame;
+                }
             }
         }
         else
         {
-            if (hasAnim && anim.speed == 0f) anim.speed = 1f;
+            if (hasAnim && wasFrozen) { anim.speed = savedSpeed <= 0f ? 1f : savedSpeed; }
+            seekedFrame = -1;
+
             float t;
             if (hasAnim)
             {
@@ -124,6 +146,7 @@ public class HandPoseReplayer : MonoBehaviour
             }
             curFrame = Mathf.Clamp((int)(t * data.fps), 0, data.frames - 1);
         }
+        wasFrozen = freeze;
 
         var Q = playRefined ? data.q : data.qOrig;
         int nb = data.names.Length;
@@ -141,13 +164,13 @@ public class HandPoseReplayer : MonoBehaviour
         }
     }
 
-    bool InRefined => curFrame >= refinedStart && curFrame < refinedEnd;
-
     string Status()
     {
         string mode = playRefined ? "REFINED" : "ORIGINAL";
-        string seg = InRefined ? "   << optimised range" : "";
-        return $"t = {curFrame / data.fps:F2}s   frame {curFrame}   [{mode}]{seg}";
+        string seg = (curFrame >= refinedStart && curFrame < refinedEnd)
+            ? "   << optimised range" : "";
+        string frz = freeze ? "   [FROZEN]" : "";
+        return $"t = {curFrame / data.fps:F2}s   frame {curFrame}   [{mode}]{frz}{seg}";
     }
 
     void OnGUI()
