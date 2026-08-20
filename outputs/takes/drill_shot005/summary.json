@@ -13,7 +13,7 @@
       "n_frames": 1107,
       "joints": {
         "LeftHand": {
-          "min_signed_mm": -0.6074069386983809,
+          "min_signed_mm": -0.5097089310807629,
           "contact_frames": 106,
           "contact_segments": [
             [
@@ -61,7 +61,7 @@
           ]
         },
         "RightHand": {
-          "min_signed_mm": -2.766794219390267,
+          "min_signed_mm": -2.7663369608393653,
           "contact_frames": 146,
           "contact_segments": [
             [
@@ -121,7 +121,7 @@
           ]
         },
         "LeftHandThumb1": {
-          "min_signed_mm": 2.8690858535006956,
+          "min_signed_mm": 2.8639569181035256,
           "contact_frames": 54,
           "contact_segments": [
             [
@@ -175,7 +175,7 @@
           ]
         },
         "LeftHandThumb2": {
-          "min_signed_mm": -11.071998945257809,
+          "min_signed_mm": -11.070831219887088,
           "contact_frames": 230,
           "contact_segments": [
             [
@@ -247,7 +247,7 @@
           ]
         },
         "LeftHandThumb3": {
-          "min_signed_mm": -23.805017973495573,
+          "min_signed_mm": -23.761543197791482,
           "contact_frames": 409,
           "contact_segments": [
             [
@@ -319,7 +319,7 @@
           ]
         },
         "LeftHandThumbEE": {
-          "min_signed_mm": -22.137215115271225,
+          "min_signed_mm": -22.12039404001525,
           "contact_frames": 469,
           "contact_segments": [
             [
@@ -379,7 +379,7 @@
           ]
         },
         "LeftHandIndex1": {
-          "min_signed_mm": -18.357868068221038,
+          "min_signed_mm": -18.20628376743172,
           "contact_frames": 405,
           "contact_segments": [
             [
@@ -481,7 +481,7 @@
           ]
         },
         "LeftHandIndex2": {
-          "min_signed_mm": -20.8741438466877,
+          "min_signed_mm": -20.873024756019518,
           "contact_frames": 482,
           "contact_segments": [
             [
@@ -541,7 +541,7 @@
           ]
         },
         "LeftHandIndex3": {
-          "min_signed_mm": -20.161053818344914,
+          "min_signed_mm": -20.081198288332292,
           "contact_frames": 426,
           "contact_segments": [
             [
@@ -601,8 +601,8 @@
           ]
         },
         "LeftHandIndexEE": {
-          "min_signed_mm": -18.994994096518276,
-          "contact_frames": 364,
+          "min_signed_mm": -18.984480174352992,
+          "contact_frames": 365,
           "contact_segments": [
             [
               126,
@@ -623,9 +623,9 @@
               4.283333
             ],
             [
-              266,
+              265,
               280,
-              4.433333,
+              4.416667,
               4.666667
             ],
             [
@@ -691,7 +691,7 @@
           ]
         },
         "LeftHandMiddle1": {
-          "min_signed_mm": -22.605737894426735,
+          "min_signed_mm": -22.60205134108753,
           "contact_frames": 465,
           "contact_segments": [
             [
@@ -757,8 +757,8 @@
           ]
         },
         "LeftHandMiddle2": {
-          "min_signed_mm": -19.113200637132337,
-          "contact_frames": 506,
+          "min_signed_mm": -19.105893954635157,
+          "contact_frames": 505,
           "contact_segments": [
             [
               132,
@@ -798,8 +798,14 @@
             ],
             [
               637,
-              725,
+              653,
               10.616667,
+              10.883333
+            ],
+            [
+              655,
+              725,
+              10.916667,
               12.083333
             ],
             [
@@ -811,8 +817,8 @@
           ]
         },
         "LeftHandMiddle3": {
-          "min_signed_mm": -17.250415204502723,
-          "contact_frames": 417,
+          "min_signed_mm": -17.247828803384866,
+          "contact_frames": 418,
           "contact_segments": [
             [
               131,
@@ -839,9 +845,9 @@
               6.116667
             ],
             [
-              374,
+              373,
               376,
-              6.233333,
+              6.216667,
               6.266667
             ],
             [
@@ -919,8 +925,8 @@
           ]
         },
         "LeftHandMiddleEE": {
-          "min_signed_mm": -18.422036107806996,
-          "contact_frames": 362,
+          "min_signed_mm": -18.41039738355523,
+          "contact_frames": 363,
           "contact_segments": [
             [
               128,
@@ -996,9 +1002,9 @@
             ],
             [
               653,
-              656,
+              657,
               10.883333,
-              10.933333
+              10.95
             ],
             [
               691,
@@ -1015,7 +1021,7 @@
           ]
         },
         "LeftHandRing1": {
-          "min_signed_mm": -19.630408439927397,
+          "min_signed_mm": -19.62034760790897,
           "contact_frames": 472,
           "contact_segments": [
             [
@@ -1093,7 +1099,7 @@
           ]
         },
         "LeftHandRing2": {
-          "min_signed_mm": -21.470210780821763,
+          "min_signed_mm": -21.442335079492835,
           "contact_frames": 521,
           "contact_segments": [
             [
@@ -1153,7 +1159,7 @@
           ]
         },
         "LeftHandRing3": {
-          "min_signed_mm": -18.84410812330109,
+          "min_signed_mm": -18.830133381388766,
           "contact_frames": 503,
           "contact_segments": [
             [
@@ -1237,7 +1243,7 @@
           ]
         },
         "LeftHandRingEE": {
-          "min_signed_mm": -15.76244644267277,
+          "min_signed_mm": -15.761590672924777,
           "contact_frames": 423,
           "contact_segments": [
             [
@@ -1351,7 +1357,7 @@
           ]
         },
         "LeftHandPinky1": {
-          "min_signed_mm": -21.59627838371804,
+          "min_signed_mm": -21.58154389118659,
           "contact_frames": 453,
           "contact_segments": [
             [
@@ -1423,7 +1429,7 @@
           ]
         },
         "LeftHandPinky2": {
-          "min_signed_mm": -18.26961281106431,
+          "min_signed_mm": -18.261261937286015,
           "contact_frames": 516,
           "contact_segments": [
             [
@@ -1519,7 +1525,7 @@
           ]
         },
         "LeftHandPinky3": {
-          "min_signed_mm": -21.050578470774507,
+          "min_signed_mm": -21.05011854337734,
           "contact_frames": 531,
           "contact_segments": [
             [
@@ -1615,7 +1621,7 @@
           ]
         },
         "LeftHandPinkyEE": {
-          "min_signed_mm": -16.87086211011907,
+          "min_signed_mm": -16.863431064507804,
           "contact_frames": 469,
           "contact_segments": [
             [
@@ -1735,7 +1741,7 @@
           ]
         },
         "RightHandThumb1": {
-          "min_signed_mm": -11.898335719932138,
+          "min_signed_mm": -11.894890507718056,
           "contact_frames": 111,
           "contact_segments": [
             [
@@ -1777,7 +1783,7 @@
           ]
         },
         "RightHandThumb2": {
-          "min_signed_mm": -16.645537072683915,
+          "min_signed_mm": -16.64448498953243,
           "contact_frames": 175,
           "contact_segments": [
             [
@@ -1831,7 +1837,7 @@
           ]
         },
         "RightHandThumb3": {
-          "min_signed_mm": -16.20845080003556,
+          "min_signed_mm": -16.203292373695078,
           "contact_frames": 524,
           "contact_segments": [
             [
@@ -1879,7 +1885,7 @@
           ]
         },
         "RightHandThumbEE": {
-          "min_signed_mm": -16.706518902145294,
+          "min_signed_mm": -16.678819475098454,
           "contact_frames": 559,
           "contact_segments": [
             [
@@ -1909,7 +1915,7 @@
           ]
         },
         "RightHandIndex1": {
-          "min_signed_mm": -14.586319657268854,
+          "min_signed_mm": -14.58559111893105,
           "contact_frames": 426,
           "contact_segments": [
             [
@@ -1969,7 +1975,7 @@
           ]
         },
         "RightHandIndex2": {
-          "min_signed_mm": -5.838665315453365,
+          "min_signed_mm": -5.837557585699938,
           "contact_frames": 408,
           "contact_segments": [
             [
@@ -2053,7 +2059,7 @@
           ]
         },
         "RightHandIndex3": {
-          "min_signed_mm": -6.921551081961797,
+          "min_signed_mm": -6.9078194619219095,
           "contact_frames": 194,
           "contact_segments": [
             [
@@ -2137,7 +2143,7 @@
           ]
         },
         "RightHandIndexEE": {
-          "min_signed_mm": -13.446963146025343,
+          "min_signed_mm": -13.440105144687832,
           "contact_frames": 443,
           "contact_segments": [
             [
@@ -2191,7 +2197,7 @@
           ]
         },
         "RightHandMiddle1": {
-          "min_signed_mm": -15.675358012165287,
+          "min_signed_mm": -15.67355639231479,
           "contact_frames": 403,
           "contact_segments": [
             [
@@ -2251,8 +2257,8 @@
           ]
         },
         "RightHandMiddle2": {
-          "min_signed_mm": -9.645055405617576,
-          "contact_frames": 350,
+          "min_signed_mm": -9.644794107258612,
+          "contact_frames": 354,
           "contact_segments": [
             [
               121,
@@ -2297,16 +2303,22 @@
               6.783333
             ],
             [
-              414,
-              417,
-              6.9,
-              6.95
+              413,
+              418,
+              6.883333,
+              6.966667
             ],
             [
               425,
               458,
               7.083333,
               7.633333
+            ],
+            [
+              466,
+              466,
+              7.766667,
+              7.766667
             ],
             [
               473,
@@ -2321,9 +2333,9 @@
               8.933333
             ],
             [
-              542,
+              541,
               575,
-              9.033333,
+              9.016667,
               9.583333
             ],
             [
@@ -2347,7 +2359,7 @@
           ]
         },
         "RightHandMiddle3": {
-          "min_signed_mm": -15.613699349731503,
+          "min_signed_mm": -15.60177186239304,
           "contact_frames": 167,
           "contact_segments": [
             [
@@ -2431,7 +2443,7 @@
           ]
         },
         "RightHandMiddleEE": {
-          "min_signed_mm": -16.828076231803973,
+          "min_signed_mm": -16.792931077719654,
           "contact_frames": 474,
           "contact_segments": [
             [
@@ -2491,7 +2503,7 @@
           ]
         },
         "RightHandRing1": {
-          "min_signed_mm": -10.221939006474907,
+          "min_signed_mm": -10.178239245911955,
           "contact_frames": 231,
           "contact_segments": [
             [
@@ -2563,7 +2575,7 @@
           ]
         },
         "RightHandRing2": {
-          "min_signed_mm": -17.44606925348879,
+          "min_signed_mm": -17.40083158209577,
           "contact_frames": 257,
           "contact_segments": [
             [
@@ -2641,7 +2653,7 @@
           ]
         },
         "RightHandRing3": {
-          "min_signed_mm": -15.429550756232423,
+          "min_signed_mm": -15.408864114383643,
           "contact_frames": 366,
           "contact_segments": [
             [
@@ -2761,7 +2773,7 @@
           ]
         },
         "RightHandRingEE": {
-          "min_signed_mm": -14.856447184822065,
+          "min_signed_mm": -14.844601892636422,
           "contact_frames": 495,
           "contact_segments": [
             [
@@ -2815,13 +2827,13 @@
           ]
         },
         "RightHandPinky1": {
-          "min_signed_mm": -9.998497065786127,
-          "contact_frames": 146,
+          "min_signed_mm": -9.9957208576209,
+          "contact_frames": 147,
           "contact_segments": [
             [
-              133,
+              132,
               167,
-              2.216667,
+              2.2,
               2.783333
             ],
             [
@@ -2869,7 +2881,7 @@
           ]
         },
         "RightHandPinky2": {
-          "min_signed_mm": -17.691469428732525,
+          "min_signed_mm": -17.68491433727028,
           "contact_frames": 213,
           "contact_segments": [
             [
@@ -2935,7 +2947,7 @@
           ]
         },
         "RightHandPinky3": {
-          "min_signed_mm": -17.127398185736293,
+          "min_signed_mm": -17.05915125001644,
           "contact_frames": 400,
           "contact_segments": [
             [
@@ -3025,7 +3037,7 @@
           ]
         },
         "RightHandPinkyEE": {
-          "min_signed_mm": -14.543762917198737,
+          "min_signed_mm": -14.541989143168594,
           "contact_frames": 517,
           "contact_segments": [
             [
@@ -3692,6 +3704,10 @@
         744
       ],
       "anomaly_frames": [
+        197,
+        573,
+        653,
+        654,
         740,
         741,
         743
@@ -3701,22 +3717,22 @@
       "n_frames": 1107,
       "joints": {
         "LeftHand": {
-          "min_signed_mm": 40.41716585457678,
+          "min_signed_mm": 40.414552905112714,
           "contact_frames": 0,
           "contact_segments": []
         },
         "RightHand": {
-          "min_signed_mm": 41.46349804234394,
+          "min_signed_mm": 41.46305265025263,
           "contact_frames": 0,
           "contact_segments": []
         },
         "LeftHandThumb1": {
-          "min_signed_mm": 19.29216330127847,
+          "min_signed_mm": 19.232539617340013,
           "contact_frames": 0,
           "contact_segments": []
         },
         "LeftHandThumb2": {
-          "min_signed_mm": -10.980185555879281,
+          "min_signed_mm": -10.979133399201158,
           "contact_frames": 28,
           "contact_segments": [
             [
@@ -3728,7 +3744,7 @@
           ]
         },
         "LeftHandThumb3": {
-          "min_signed_mm": -12.705802781714675,
+          "min_signed_mm": -12.704170726646776,
           "contact_frames": 33,
           "contact_segments": [
             [
@@ -3740,7 +3756,7 @@
           ]
         },
         "LeftHandThumbEE": {
-          "min_signed_mm": -14.5293795391643,
+          "min_signed_mm": -14.525361063132396,
           "contact_frames": 38,
           "contact_segments": [
             [
@@ -3752,7 +3768,7 @@
           ]
         },
         "LeftHandIndex1": {
-          "min_signed_mm": -8.258772822487135,
+          "min_signed_mm": -8.245680615878094,
           "contact_frames": 26,
           "contact_segments": [
             [
@@ -3764,7 +3780,7 @@
           ]
         },
         "LeftHandIndex2": {
-          "min_signed_mm": -5.441935911461048,
+          "min_signed_mm": -5.436263261644122,
           "contact_frames": 37,
           "contact_segments": [
             [
@@ -3776,7 +3792,7 @@
           ]
         },
         "LeftHandIndex3": {
-          "min_signed_mm": 0.3024106545008709,
+          "min_signed_mm": 0.26406152013102596,
           "contact_frames": 19,
           "contact_segments": [
             [
@@ -3788,7 +3804,7 @@
           ]
         },
         "LeftHandIndexEE": {
-          "min_signed_mm": 14.968699489491744,
+          "min_signed_mm": 14.947159414997826,
           "contact_frames": 1,
           "contact_segments": [
             [
@@ -3800,7 +3816,7 @@
           ]
         },
         "LeftHandMiddle1": {
-          "min_signed_mm": 2.156901672161954,
+          "min_signed_mm": 2.150365666223925,
           "contact_frames": 22,
           "contact_segments": [
             [
@@ -3812,7 +3828,7 @@
           ]
         },
         "LeftHandMiddle2": {
-          "min_signed_mm": -3.289576549466204,
+          "min_signed_mm": -3.289378025210028,
           "contact_frames": 19,
           "contact_segments": [
             [
@@ -3824,7 +3840,7 @@
           ]
         },
         "LeftHandMiddle3": {
-          "min_signed_mm": 13.977659500235085,
+          "min_signed_mm": 13.964374154960327,
           "contact_frames": 5,
           "contact_segments": [
             [
@@ -3836,17 +3852,17 @@
           ]
         },
         "LeftHandMiddleEE": {
-          "min_signed_mm": 23.385639188031536,
+          "min_signed_mm": 23.379406927446702,
           "contact_frames": 0,
           "contact_segments": []
         },
         "LeftHandRing1": {
-          "min_signed_mm": 16.097230107545165,
+          "min_signed_mm": 16.096868690415043,
           "contact_frames": 0,
           "contact_segments": []
         },
         "LeftHandRing2": {
-          "min_signed_mm": 10.118808978036851,
+          "min_signed_mm": 10.11799355358567,
           "contact_frames": 5,
           "contact_segments": [
             [
@@ -3858,7 +3874,7 @@
           ]
         },
         "LeftHandRing3": {
-          "min_signed_mm": 13.065438045895545,
+          "min_signed_mm": 13.06248373998954,
           "contact_frames": 3,
           "contact_segments": [
             [
@@ -3870,37 +3886,37 @@
           ]
         },
         "LeftHandRingEE": {
-          "min_signed_mm": 20.002495814005627,
+          "min_signed_mm": 19.968974193843305,
           "contact_frames": 0,
           "contact_segments": []
         },
         "LeftHandPinky1": {
-          "min_signed_mm": 28.604631003671766,
+          "min_signed_mm": 28.599985488362684,
           "contact_frames": 0,
           "contact_segments": []
         },
         "LeftHandPinky2": {
-          "min_signed_mm": 24.460942154743087,
+          "min_signed_mm": 24.457972754783214,
           "contact_frames": 0,
           "contact_segments": []
         },
         "LeftHandPinky3": {
-          "min_signed_mm": 18.39674688369164,
+          "min_signed_mm": 18.390251590627884,
           "contact_frames": 0,
           "contact_segments": []
         },
         "LeftHandPinkyEE": {
-          "min_signed_mm": 17.759882339302607,
+          "min_signed_mm": 17.747712815515158,
           "contact_frames": 0,
           "contact_segments": []
         },
         "RightHandThumb1": {
-          "min_signed_mm": 22.50231993855252,
+          "min_signed_mm": 22.481932864192363,
           "contact_frames": 0,
           "contact_segments": []
         },
         "RightHandThumb2": {
-          "min_signed_mm": -4.961484768578182,
+          "min_signed_mm": -4.960974632473961,
           "contact_frames": 93,
           "contact_segments": [
             [
@@ -3936,7 +3952,7 @@
           ]
         },
         "RightHandThumb3": {
-          "min_signed_mm": -14.966941751541114,
+          "min_signed_mm": -14.902712754373395,
           "contact_frames": 325,
           "contact_segments": [
             [
@@ -3960,7 +3976,7 @@
           ]
         },
         "RightHandThumbEE": {
-          "min_signed_mm": -15.808048016084449,
+          "min_signed_mm": -15.807782823711241,
           "contact_frames": 322,
           "contact_segments": [
             [
@@ -4008,7 +4024,7 @@
           ]
         },
         "RightHandIndex1": {
-          "min_signed_mm": -16.53259364623254,
+          "min_signed_mm": -16.530840303948956,
           "contact_frames": 233,
           "contact_segments": [
             [
@@ -4062,7 +4078,7 @@
           ]
         },
         "RightHandIndex2": {
-          "min_signed_mm": -17.38533051055998,
+          "min_signed_mm": -17.384202754066845,
           "contact_frames": 278,
           "contact_segments": [
             [
@@ -4128,7 +4144,7 @@
           ]
         },
         "RightHandIndex3": {
-          "min_signed_mm": -15.558814444344671,
+          "min_signed_mm": -15.55757768652619,
           "contact_frames": 318,
           "contact_segments": [
             [
@@ -4170,7 +4186,7 @@
           ]
         },
         "RightHandIndexEE": {
-          "min_signed_mm": -16.158817138542208,
+          "min_signed_mm": -16.126794782878935,
           "contact_frames": 304,
           "contact_segments": [
             [
@@ -4218,8 +4234,8 @@
           ]
         },
         "RightHandMiddle1": {
-          "min_signed_mm": -9.202834022287938,
-          "contact_frames": 165,
+          "min_signed_mm": -9.202491705033864,
+          "contact_frames": 166,
           "contact_segments": [
             [
               664,
@@ -4247,9 +4263,9 @@
             ],
             [
               762,
-              771,
+              772,
               12.7,
-              12.85
+              12.866667
             ],
             [
               793,
@@ -4296,8 +4312,8 @@
           ]
         },
         "RightHandMiddle2": {
-          "min_signed_mm": -12.847932109924331,
-          "contact_frames": 274,
+          "min_signed_mm": -12.843671187454563,
+          "contact_frames": 275,
           "contact_segments": [
             [
               661,
@@ -4337,9 +4353,9 @@
             ],
             [
               912,
-              931,
+              932,
               15.2,
-              15.516667
+              15.533333
             ],
             [
               941,
@@ -4356,7 +4372,7 @@
           ]
         },
         "RightHandMiddle3": {
-          "min_signed_mm": -15.219705418226011,
+          "min_signed_mm": -15.21673943417472,
           "contact_frames": 275,
           "contact_segments": [
             [
@@ -4422,7 +4438,7 @@
           ]
         },
         "RightHandMiddleEE": {
-          "min_signed_mm": -16.26675586815456,
+          "min_signed_mm": -16.261062241654503,
           "contact_frames": 314,
           "contact_segments": [
             [
@@ -4494,7 +4510,7 @@
           ]
         },
         "RightHandRing1": {
-          "min_signed_mm": -0.8973168155039074,
+          "min_signed_mm": -0.8922373416170767,
           "contact_frames": 74,
           "contact_segments": [
             [
@@ -4548,7 +4564,7 @@
           ]
         },
         "RightHandRing2": {
-          "min_signed_mm": -2.725744880376524,
+          "min_signed_mm": -2.723840535563721,
           "contact_frames": 173,
           "contact_segments": [
             [
@@ -4626,7 +4642,7 @@
           ]
         },
         "RightHandRing3": {
-          "min_signed_mm": -14.469368539119127,
+          "min_signed_mm": -14.468183507752073,
           "contact_frames": 232,
           "contact_segments": [
             [
@@ -4716,7 +4732,7 @@
           ]
         },
         "RightHandRingEE": {
-          "min_signed_mm": -19.03485516759989,
+          "min_signed_mm": -19.027426698724927,
           "contact_frames": 332,
           "contact_segments": [
             [
@@ -4758,7 +4774,7 @@
           ]
         },
         "RightHandPinky1": {
-          "min_signed_mm": 8.821450254239807,
+          "min_signed_mm": 8.795736135167328,
           "contact_frames": 30,
           "contact_segments": [
             [
@@ -4782,7 +4798,7 @@
           ]
         },
         "RightHandPinky2": {
-          "min_signed_mm": 0.6921830913791893,
+          "min_signed_mm": 0.6623943403567718,
           "contact_frames": 156,
           "contact_segments": [
             [
@@ -4842,7 +4858,7 @@
           ]
         },
         "RightHandPinky3": {
-          "min_signed_mm": -6.98406732089597,
+          "min_signed_mm": -6.983016412063542,
           "contact_frames": 219,
           "contact_segments": [
             [
@@ -4914,7 +4930,7 @@
           ]
         },
         "RightHandPinkyEE": {
-          "min_signed_mm": -16.361714328818312,
+          "min_signed_mm": -16.310552981686016,
           "contact_frames": 292,
           "contact_segments": [
             [
@@ -5111,7 +5127,6 @@
         846,
         847,
         848,
-        849,
         851,
         852,
         853,

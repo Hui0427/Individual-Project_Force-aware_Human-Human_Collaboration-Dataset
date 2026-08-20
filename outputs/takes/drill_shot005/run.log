@@ -1,6 +1,6 @@
 
 ======================================================================
-drill_shot005  Sat Aug 15 20:26:51 2026
+drill_shot005  Thu Aug 20 08:38:08 2026
 ======================================================================
 
 $ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/extract_object_pose.py /Users/hxy/Desktop/YCB/new_data_0716/shot_005/Drill.fbx /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/drill_pose.csv
@@ -89,10 +89,27 @@ frame 600/1107
 frame 800/1107
 frame 1000/1107
 
-$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/compute_hand_object_distances.py --object drill --take shot_005/Drill.skel --mesh /Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/drill_pose.csv --hands /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person1_hand_joints.csv /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person2_hand_joints.csv --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005 --threshold-mm 15.0 --sampled 500000
-mesh: 16384 faces, aligned into drill Hips frame (take shot_005/Drill.skel, scale [1.0, 1.0, 1.0]), distance mode: sampled KD-tree (500000 pts)
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/compute_hand_object_distances.py --object drill --take shot_005/Drill.skel --mesh /Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/drill_pose.csv --hands /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person1_hand_joints.csv /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person2_hand_joints.csv --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005 --threshold-mm 15.0
+/Users/hxy/Desktop/core4d_refine_project/.venv/lib/python3.13/site-packages/trimesh/triangles.py:659: RuntimeWarning: invalid value encountered in divide
+  v = (d1[is_ab] / (d1[is_ab] - d3[is_ab])).reshape((-1, 1))
+
+======================================================================
+drill_shot005  Thu Aug 20 09:08:41 2026
+======================================================================
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/compute_hand_object_distances.py --object drill --take shot_005/Drill.skel --mesh /Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/drill_pose.csv --hands /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person1_hand_joints.csv /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person2_hand_joints.csv --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005 --threshold-mm 15.0
+
+======================================================================
+drill_shot005  Thu Aug 20 09:15:34 2026
+======================================================================
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/compute_hand_object_distances.py --object drill --take shot_005/Drill.skel --mesh /Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/drill_pose.csv --hands /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person1_hand_joints.csv /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person2_hand_joints.csv --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005 --threshold-mm 15.0
+/Users/hxy/Desktop/core4d_refine_project/.venv/lib/python3.13/site-packages/trimesh/triangles.py:659: RuntimeWarning: invalid value encountered in divide
+  v = (d1[is_ab] / (d1[is_ab] - d3[is_ab])).reshape((-1, 1))
+mesh has 16,384 faces -> exact mode (auto)
+mesh: 16384 faces, aligned into drill Hips frame (take shot_005/Drill.skel, scale [1.0, 1.0, 1.0]), distance mode: exact point-to-triangle (chunks of 2000)
 person1: 1107 frames x 42 joints | min signed -23.8 mm | contact frames @15mm: 644 | penetration(<-5mm) frames: 605
-person2: 1107 frames x 42 joints | min signed -19.0 mm | contact frames @15mm: 377 | penetration(<-5mm) frames: 320
+person2: 1107 frames x 42 joints | min signed -19.0 mm | contact frames @15mm: 377 | penetration(<-5mm) frames: 319
 wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/distances.csv and summary.json
 
 $ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/plot_hoi_results.py --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005 --mesh /Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj --object drill --take shot_005/Drill.skel --object-pose-name drill_pose.csv
@@ -100,27 +117,80 @@ fig1_distance_curves.png
 fig2_contact_timeline.png
 fig3_closest_frame_3d.png  (person1 frame 512, -23.8 mm)
 
-$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person1_locals.npz --person person1 --object drill --take shot_005/Drill.skel --mesh /Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/drill_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/distances.csv --frames 150 270 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1 --iters 300 --mode anatomical
-/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:304: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person1_locals.npz --person person1 --object drill --take shot_005/Drill.skel --mesh /Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/drill_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:445: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
 Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
   row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
-FK sanity vs earlier extraction: LeftHand frame 150 differs 0.000 mm
+segment: frames 0..1107 (1107 frames)  [skeleton 1109, object 1107]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 325/35488 (0.9%), 平均可信度 0.978
+  RightHandRing3                     4.5% 帧可信度低
+  LeftHandPinky1                     3.4% 帧可信度低
+  LeftHandThumb2                     2.5% 帧可信度低
+  LeftHandThumb1                     2.3% 帧可信度低
+  LeftHandIndex3                     2.3% 帧可信度低
+  涉及 198 帧,最差帧 803
+deviation weighting: adaptive (segment mean 0.978, min 0.167)
 anatomical mode: 25 hinge joints, 5 2-DOF joints, wrist cap 15.0 deg
-contact targets in segment: 886 (frame,finger) pairs
-  it=0  loss=1.879e+00  contact=1.586e-05  pen=8.603e-05  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
-  it=50  loss=1.015e+00  contact=3.165e-06  pen=4.749e-05  dev=8.242e-03  temp=1.264e-03  lim=3.435e-05
-  it=100  loss=7.440e-01  contact=3.127e-06  pen=3.308e-05  dev=1.504e-02  temp=1.768e-03  lim=7.256e-05
-  it=150  loss=6.199e-01  contact=2.822e-06  pen=2.657e-05  dev=1.987e-02  temp=1.982e-03  lim=7.830e-05
-  it=200  loss=5.405e-01  contact=2.767e-06  pen=2.238e-05  dev=2.333e-02  temp=2.073e-03  lim=4.976e-05
-  it=250  loss=4.928e-01  contact=2.750e-06  pen=1.982e-05  dev=2.592e-02  temp=2.119e-03  lim=5.074e-05
-  it=299  loss=4.564e-01  contact=2.896e-06  pen=1.788e-05  dev=2.738e-02  temp=2.096e-03  lim=5.425e-05
-before: contact 段 capsule 距离   -5.07 mm | 最深穿透  -29.15 mm | 穿透样本占比 56.2%
-after : contact 段 capsule 距离   -1.26 mm | 最深穿透  -27.21 mm | 穿透样本占比 37.8%
-平均改动 12.52°, 最大 49.17°
+object pose: 3% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 9.8 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 676 frames (fully open 648) | physics active on 674/1107 frames
+cavity from occupancy: 8 voxels (2 cm, seen on >=20 frames) covering 2.8% of samples
+contact targets in segment: 4577 (frame,finger) pairs
+  it=0  loss=8.165e-01  contact=2.322e-05  pen=2.922e-05  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=5.603e-01  contact=7.433e-06  pen=2.254e-05  dev=4.297e-04  temp=1.736e-06  lim=7.513e-06
+  it=100  loss=4.981e-01  contact=7.086e-06  pen=1.909e-05  dev=7.810e-04  temp=2.229e-06  lim=7.651e-06
+  it=150  loss=4.574e-01  contact=7.220e-06  pen=1.665e-05  dev=1.132e-03  temp=2.543e-06  lim=1.512e-05
+  it=200  loss=4.319e-01  contact=7.115e-06  pen=1.510e-05  dev=1.509e-03  temp=2.847e-06  lim=2.375e-05
+  it=250  loss=4.150e-01  contact=7.034e-06  pen=1.406e-05  dev=1.896e-03  temp=3.063e-06  lim=3.112e-05
+  it=300  loss=4.007e-01  contact=6.853e-06  pen=1.329e-05  dev=2.284e-03  temp=3.186e-06  lim=4.256e-05
+  it=350  loss=3.850e-01  contact=6.723e-06  pen=1.245e-05  dev=2.680e-03  temp=3.280e-06  lim=4.793e-05
+  it=399  loss=3.738e-01  contact=6.702e-06  pen=1.195e-05  dev=3.048e-03  temp=3.215e-06  lim=5.109e-05
+before: contact 段 capsule 距离   -4.67 mm | 最深穿透  -32.73 mm | 穿透样本占比 25.9%
+after : contact 段 capsule 距离   -3.20 mm | 最深穿透  -31.59 mm | 穿透样本占比 20.4%
+平均改动 3.51°, 最大 39.70°
 wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/hand_params_refined.npz, skeleton_meta.json
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py --locals /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/person2_locals.npz --person person2 --object drill --take shot_005/Drill.skel --mesh /Users/hxy/Desktop/YCB/035_power_drill/google_16k/textured.obj --object-pose /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/drill_pose.csv --distances /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/distances.csv --frames 0 -1 --out-dir /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person2 --iters 400 --mode anatomical
+/Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/optimize_hand_pose.py:445: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  row = dict(it=it, loss=float(loss), contact=float(L_contact), pen=float(L_pen),
+segment: frames 0..1107 (1107 frames)  [skeleton 1107, object 1107]
+FK sanity vs earlier extraction: LeftHand frame 0 differs 0.000 mm
+低可信度样本 114/35424 (0.3%), 平均可信度 0.991
+  LeftHandRing1                      1.4% 帧可信度低
+  LeftHandPinky1                     1.0% 帧可信度低
+  LeftHandMiddle3                    0.9% 帧可信度低
+  RightHandMiddle3                   0.8% 帧可信度低
+  LeftHandThumb1                     0.6% 帧可信度低
+  涉及 82 帧,最差帧 803
+deviation weighting: adaptive (segment mean 0.991, min 0.127)
+anatomical mode: 22 hinge joints, 8 2-DOF joints, wrist cap 15.0 deg
+object pose: 3% duplicate frames (30fps sampled at 60); smoothing w=5 moved it by at most 9.8 mm
+object confidence: 0 frames doubted (mean 1.000) | proximity gate open on 409 frames (fully open 380) | physics active on 407/1107 frames
+cavity from occupancy: 0 voxels (2 cm, seen on >=20 frames) covering 0.0% of samples
+contact targets in segment: 1603 (frame,finger) pairs
+  it=0  loss=2.957e-01  contact=1.598e-05  pen=6.793e-06  dev=0.000e+00  temp=0.000e+00  lim=0.000e+00
+  it=50  loss=1.460e-01  contact=2.581e-06  pen=5.031e-06  dev=1.527e-04  temp=9.722e-07  lim=1.317e-07
+  it=100  loss=1.281e-01  contact=2.361e-06  pen=4.106e-06  dev=2.514e-04  temp=1.102e-06  lim=5.321e-06
+  it=150  loss=1.203e-01  contact=2.235e-06  pen=3.719e-06  dev=3.449e-04  temp=1.158e-06  lim=1.112e-05
+  it=200  loss=1.164e-01  contact=2.167e-06  pen=3.514e-06  dev=4.335e-04  temp=1.195e-06  lim=1.279e-05
+  it=250  loss=1.136e-01  contact=2.113e-06  pen=3.372e-06  dev=5.211e-04  temp=1.219e-06  lim=1.256e-05
+  it=300  loss=1.101e-01  contact=2.018e-06  pen=3.234e-06  dev=6.201e-04  temp=1.228e-06  lim=9.498e-06
+  it=350  loss=1.078e-01  contact=1.973e-06  pen=3.125e-06  dev=7.199e-04  temp=1.236e-06  lim=9.542e-06
+  it=399  loss=1.055e-01  contact=1.981e-06  pen=2.966e-06  dev=8.135e-04  temp=1.272e-06  lim=1.131e-05
+before: contact 段 capsule 距离   -4.43 mm | 最深穿透  -26.43 mm | 穿透样本占比 7.1%
+after : contact 段 capsule 距离   -4.06 mm | 最深穿透  -24.97 mm | 穿透样本占比 6.9%
+平均改动 1.24°, 最大 20.53°
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person2/hand_params_refined.npz, skeleton_meta.json
 
 $ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/replayer_person1.json
 wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/replayer_person1.json: 1109 frames x 70 bones (diff bones: 32)
 
 $ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/refined_person1.anim --clip-name refined_person1_drill_shot005
 wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person1/refined_person1.anim  (1109 frames, 80 nodes, fps 60, mirror=negate_x)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_replayer_json.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person2/hand_params_orig.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person2/replayer_person2.json
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person2/replayer_person2.json: 1107 frames x 70 bones (diff bones: 27)
+
+$ /Users/hxy/Desktop/core4d_refine_project/.venv/bin/python /Users/hxy/Desktop/core4d_refine_project/scripts/hand_refine/export_unity_anim.py /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person2/hand_params_refined.npz /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person2/refined_person2.anim --clip-name refined_person2_drill_shot005
+wrote /Users/hxy/Desktop/core4d_refine_project/outputs/takes/drill_shot005/refine_person2/refined_person2.anim  (1107 frames, 80 nodes, fps 60, mirror=negate_x)
